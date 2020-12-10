@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ViewController.tripiWasTapped(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "terraApp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Array&lt;A&gt;.index(of:):HTTPHeaders.swift">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

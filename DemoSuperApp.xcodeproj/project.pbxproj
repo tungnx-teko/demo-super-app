@@ -14,7 +14,6 @@
 		1A423EA2257F643E00768E16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A423EA0257F643E00768E16 /* LaunchScreen.storyboard */; };
 		1A423EAD257F6D6B00768E16 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EAB257F6D6B00768E16 /* SplashViewController.swift */; };
 		1A423EAE257F6D6B00768E16 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A423EAC257F6D6B00768E16 /* SplashViewController.xib */; };
-		1A423EB4257F6DC400768E16 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EB3257F6DC400768E16 /* Application.swift */; };
 		1A423EB7257F6EAE00768E16 /* TerraService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A423EB6257F6EAE00768E16 /* TerraService-Info.plist */; };
 		1A423EBB257F723900768E16 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBA257F723900768E16 /* UIViewController+alert.swift */; };
 		1A423EBE257F760500768E16 /* iCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBD257F760500768E16 /* iCheck.swift */; };
@@ -31,7 +30,6 @@
 		1A423EA3257F643E00768E16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A423EAB257F6D6B00768E16 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1A423EAC257F6D6B00768E16 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		1A423EB3257F6DC400768E16 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		1A423EB6257F6EAE00768E16 /* TerraService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TerraService-Info.plist"; sourceTree = "<group>"; };
 		1A423EBA257F723900768E16 /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
 		1A423EBD257F760500768E16 /* iCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCheck.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				1A423E95257F643C00768E16 /* AppDelegate.swift */,
-				1A423EB3257F6DC400768E16 /* Application.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -334,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A423EB4257F6DC400768E16 /* Application.swift in Sources */,
 				1A423EAD257F6D6B00768E16 /* SplashViewController.swift in Sources */,
 				1A423E9A257F643C00768E16 /* ViewController.swift in Sources */,
 				1A423EE72581DA7200768E16 /* SuperAppTrackingBridge.swift in Sources */,

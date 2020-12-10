@@ -13,12 +13,13 @@ import Hestia
 import Janus
 import TrackingBridge
 
-
 extension UIApplication {
     static var terraApp: ITerraApp!
 }
 
-let terraApp: ITerraApp = UIApplication.terraApp
+var terraApp: ITerraApp {
+    return UIApplication.terraApp
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,15 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.loadTerra(application: application, launchOptions: launchOptions) { [weak self] success in
             let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-            self?.window?.rootViewController = homeVC
+            let nav = UINavigationController(rootViewController: homeVC)
+            self?.window?.rootViewController = nav
         }
         return true
     }
     
     func buildRootViewController() {
         let vc = SplashViewController(nibName: "SplashViewController", bundle: Bundle(for: SplashViewController.self))
-        let nav = UINavigationController(rootViewController: vc)
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
     
@@ -56,7 +57,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-
-
 
