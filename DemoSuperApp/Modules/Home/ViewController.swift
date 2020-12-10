@@ -54,14 +54,14 @@ class ViewController: UIViewController {
         openApp(appCode: "vnshop")
     }
     @IBAction func icheckLoginWasTapped(_ sender: Any) {
-//        let sv = iCheck.TokenGenerateService(url: URL(string: "https://social.dev.icheck.vn")!)
-        let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBkNTdhMGJlLTNlZDItNDJhMi1iM2U1LTM2Y2E3ZjkzMjEyMjQifQ.eyJzdWIiOjExMjM2OCwibmFtZSI6IlR14bqlbiBOZ3V54buFbiIsImVtYWlsIjoidHVhbkBnbWFpbC5jb20iLCJwaG9uZV9udW1iZXIiOiIwOTg3NjYzOTY3IiwicGljdHVyZSI6Imh0dHBzOi8vYXNzZXRzLmljaGVjay52bi9tdWx0aXBhcnQvMjAyMC9hcHAwMS85LzhhN2IwY2Y4NjFhOGQ1YzgwYjQzZTUzMWFkNjljODM0LnBuZyIsImFkZHJlc3MiOiIzNjggQ-G6p3UgR2nhuqV5IiwiYmlydGhkYXkiOiIxMi8yLzIwMDAiLCJhdWQiOiJpY2hlY2siLCJpYXQiOjE2MDc0MjYzMjMsImV4cCI6MTYwNzU5OTEyMywiaXNzIjoibXlpc3N1ZXJuYW1lIn0.7dCRRxdzmnU9x8yayRt3h_hauwZxTP5drjo0AeNt3dvvlJOJeY3310BbsUgmUdZK7xyYajdJLsJAGYJ-9SKRuw"
-//        sv.requestToGenerateToken { [weak self] (token) in
-//            print("iCheck token: \(String(describing: token))")
-//            guard let token = token else { return }
-//            self?.login(withToken: token)
-//        }
-        self.login(withToken: token)
+        let sv = iCheck.TokenGenerateService(url: URL(string: "https://social.dev.icheck.vn")!)
+//        let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBkNTdhMGJlLTNlZDItNDJhMi1iM2U1LTM2Y2E3ZjkzMjEyMjQifQ.eyJzdWIiOjExMjM2OCwibmFtZSI6IlR14bqlbiBOZ3V54buFbiIsImVtYWlsIjoidHVhbkBnbWFpbC5jb20iLCJwaG9uZV9udW1iZXIiOiIwOTg3NjYzOTY3IiwicGljdHVyZSI6Imh0dHBzOi8vYXNzZXRzLmljaGVjay52bi9tdWx0aXBhcnQvMjAyMC9hcHAwMS85LzhhN2IwY2Y4NjFhOGQ1YzgwYjQzZTUzMWFkNjljODM0LnBuZyIsImFkZHJlc3MiOiIzNjggQ-G6p3UgR2nhuqV5IiwiYmlydGhkYXkiOiIxMi8yLzIwMDAiLCJhdWQiOiJpY2hlY2siLCJpYXQiOjE2MDc0MjYzMjMsImV4cCI6MTYwNzU5OTEyMywiaXNzIjoibXlpc3N1ZXJuYW1lIn0.7dCRRxdzmnU9x8yayRt3h_hauwZxTP5drjo0AeNt3dvvlJOJeY3310BbsUgmUdZK7xyYajdJLsJAGYJ-9SKRuw"
+        sv.requestToGenerateToken { [weak self] (token) in
+            print("iCheck token: \(String(describing: token))")
+            guard let token = token else { return }
+            self?.login(withToken: token)
+        }
+//        self.login(withToken: token)
         
     }
     

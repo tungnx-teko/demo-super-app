@@ -14,15 +14,15 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
         navigationController?.setNavigationBarHidden(true, animated: true)
-        
-        Application.shared.loadTerra { [weak self] (isSuccess) in
-            if isSuccess {
-                let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
-                self?.navigationController?.pushViewController(homeVC, animated: false)
-            } else {
-
-            }
-        }
+//        
+//        Application.shared.loadTerra { [weak self] (isSuccess) in
+//            if isSuccess {
+//                let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+//                self?.navigationController?.pushViewController(homeVC, animated: false)
+//            } else {
+//
+//            }
+//        }
     }
 
 

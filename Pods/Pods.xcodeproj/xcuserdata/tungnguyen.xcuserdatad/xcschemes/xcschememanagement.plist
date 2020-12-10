@@ -204,6 +204,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TrackingBridge.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TripiCommon.xcscheme</key>
 		<dict>
 			<key>isShown</key>

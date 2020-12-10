@@ -1,0 +1,11 @@
+framework module TrackingBridge {
+  umbrella header "TrackingBridge.h"
+
+  export *
+  module * { export * }
+}
+
+module TrackingBridge.Swift {
+    header "TrackingBridge-Swift.h"
+    requires objc
+}

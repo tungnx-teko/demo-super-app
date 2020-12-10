@@ -103,6 +103,7 @@ PODS:
   - TerraInstancesManager (1.1.0):
     - TekCoreService (~> 1.2.2)
   - Toast-Swift (5.0.1)
+  - TrackingBridge (0.0.1)
   - TripiCommon (2.0.0):
     - Alamofire (~> 5.3.0)
     - Moya
@@ -134,12 +135,9 @@ PODS:
   - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
-  - Hestia (~> 2.2.3)
-  - HestiaIOS (= 2.2.1)
-  - Janus (~> 2.3.4)
-  - Terra (~> 2.3.0)
+  - Terra
+  - TrackingBridge (~> 0.0.1)
   - TripiFlightConnector (= 1.0.4-dev)
-  - TripiFlightKit (= 2.0.0-dev)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -184,6 +182,7 @@ SPEC REPOS:
     - TekServiceInterfaces
     - Terra
     - TerraInstancesManager
+    - TrackingBridge
     - TripiCommon
     - TripiFlightConnector
     - TripiFlightKit
@@ -228,11 +227,12 @@ SPEC CHECKSUMS:
   Terra: 8967dcfde3c36c1ada15aa051e7fdfddbbcb5196
   TerraInstancesManager: 324d494a4ca2c68311b45105d0db64d0ff85ae8d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  TrackingBridge: 5944340ff465973e8955c1c5a013d1721226694b
   TripiCommon: 1b2dc8bb9c2d7fd776a0db32676e11bd4f246f5f
   TripiFlightConnector: f7a8963b5af9ce4f999fc3e0a39c1ab1150d73dd
   TripiFlightKit: 2b011615e80726412a15aeeeb9f19048bffefea4
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 99b01f79078027e7b68acfce71fe75af4e4b20ea
+PODFILE CHECKSUM: 82183aa27068d32cdba792e7d8e43042994fbcf4
 
 COCOAPODS: 1.10.0
