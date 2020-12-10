@@ -18,37 +18,10 @@
 		1A423EB7257F6EAE00768E16 /* TerraService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A423EB6257F6EAE00768E16 /* TerraService-Info.plist */; };
 		1A423EBB257F723900768E16 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBA257F723900768E16 /* UIViewController+alert.swift */; };
 		1A423EBE257F760500768E16 /* iCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBD257F760500768E16 /* iCheck.swift */; };
-		1A423EC32580E26B00768E16 /* Janus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EBF2580CD1E00768E16 /* Janus.framework */; };
-		1A423EC42580E26B00768E16 /* Janus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EBF2580CD1E00768E16 /* Janus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A423EC72580E6C300768E16 /* Hestia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EC62580E6C300768E16 /* Hestia.framework */; };
-		1A423EC82580E6C400768E16 /* Hestia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EC62580E6C300768E16 /* Hestia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A423ED22580E9CE00768E16 /* TripiFlightConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED12580E9CE00768E16 /* TripiFlightConnector.framework */; };
-		1A423ED32580E9CE00768E16 /* TripiFlightConnector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED12580E9CE00768E16 /* TripiFlightConnector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A423ED52580E9DF00768E16 /* HestiaIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED42580E9DF00768E16 /* HestiaIOS.framework */; };
-		1A423ED62580E9DF00768E16 /* HestiaIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED42580E9DF00768E16 /* HestiaIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A423EDE2580F06A00768E16 /* TekCoreUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */; };
-		1A423EDF2580F06A00768E16 /* TekCoreUploader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1A423EC52580E26B00768E16 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1A423ED62580E9DF00768E16 /* HestiaIOS.framework in Embed Frameworks */,
-				1A423EDF2580F06A00768E16 /* TekCoreUploader.framework in Embed Frameworks */,
-				1A423EC82580E6C400768E16 /* Hestia.framework in Embed Frameworks */,
-				1A423EC42580E26B00768E16 /* Janus.framework in Embed Frameworks */,
-				1A423ED32580E9CE00768E16 /* TripiFlightConnector.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		1535E15F28B9FF599FF1F634 /* Pods_DemoSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A423E92257F643C00768E16 /* Demo Super App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo Super App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A423E95257F643C00768E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A423E99257F643C00768E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,9 +45,8 @@
 		1A423EDA2580F05B00768E16 /* TekCoreUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TekCoreUploader.framework; path = ../../../../Downloads/TekCoreUploader.framework; sourceTree = "<group>"; };
 		1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TekCoreUploader.framework; sourceTree = "<group>"; };
 		1A423EE025810FD000768E16 /* TekCrmService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TekCrmService.framework; sourceTree = "<group>"; };
-		2FE72B1DC83F7A6ED9EE4005 /* Pods-DemoSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
-		6E74F8D1AD063F0C744AAD9D /* Pods-DemoSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.release.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.release.xcconfig"; sourceTree = "<group>"; };
-		70980691A95909922449737E /* Pods_DemoSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		695E4BFB7A78264D3499D42A /* Pods-DemoSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.release.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.release.xcconfig"; sourceTree = "<group>"; };
+		C5634A8132DCFA1EB8CD35CC /* Pods-DemoSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A423ED22580E9CE00768E16 /* TripiFlightConnector.framework in Frameworks */,
-				1A423EDE2580F06A00768E16 /* TekCoreUploader.framework in Frameworks */,
-				1A423EC72580E6C300768E16 /* Hestia.framework in Frameworks */,
-				1A423EC32580E26B00768E16 /* Janus.framework in Frameworks */,
-				1A423ED52580E9DF00768E16 /* HestiaIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +164,8 @@
 		4C2DED7659C111313C946482 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2FE72B1DC83F7A6ED9EE4005 /* Pods-DemoSuperApp.debug.xcconfig */,
-				6E74F8D1AD063F0C744AAD9D /* Pods-DemoSuperApp.release.xcconfig */,
+				C5634A8132DCFA1EB8CD35CC /* Pods-DemoSuperApp.debug.xcconfig */,
+				695E4BFB7A78264D3499D42A /* Pods-DemoSuperApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -216,7 +183,7 @@
 				1A423EC92580E78800768E16 /* TripiFlightConnector.framework */,
 				1A423EC62580E6C300768E16 /* Hestia.framework */,
 				1A423EBF2580CD1E00768E16 /* Janus.framework */,
-				70980691A95909922449737E /* Pods_DemoSuperApp.framework */,
+				1535E15F28B9FF599FF1F634 /* Pods_DemoSuperApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,13 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A423EA6257F643E00768E16 /* Build configuration list for PBXNativeTarget "DemoSuperApp" */;
 			buildPhases = (
-				7A0DD580A78B43B9E9FC1032 /* [CP] Check Pods Manifest.lock */,
+				F0897CF5BC82E757CED187CE /* [CP] Check Pods Manifest.lock */,
 				1A423E8E257F643C00768E16 /* Sources */,
 				1A423E8F257F643C00768E16 /* Frameworks */,
 				1A423E90257F643C00768E16 /* Resources */,
-				1A423EC52580E26B00768E16 /* Embed Frameworks */,
-				2C0488E1B3EE706884D06AAB /* [CP] Embed Pods Frameworks */,
-				2D32542DD383E326EB536CC3 /* [CP] Copy Pods Resources */,
+				7FB47EDC6707A901CE6B517E /* [CP] Embed Pods Frameworks */,
+				9F670C5C3CDCF1074B01C4FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,7 +260,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C0488E1B3EE706884D06AAB /* [CP] Embed Pods Frameworks */ = {
+		7FB47EDC6707A901CE6B517E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,7 +277,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D32542DD383E326EB536CC3 /* [CP] Copy Pods Resources */ = {
+		9F670C5C3CDCF1074B01C4FF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +294,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A0DD580A78B43B9E9FC1032 /* [CP] Check Pods Manifest.lock */ = {
+		F0897CF5BC82E757CED187CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -504,7 +470,7 @@
 		};
 		1A423EA7257F643E00768E16 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FE72B1DC83F7A6ED9EE4005 /* Pods-DemoSuperApp.debug.xcconfig */;
+			baseConfigurationReference = C5634A8132DCFA1EB8CD35CC /* Pods-DemoSuperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,7 +495,7 @@
 		};
 		1A423EA8257F643E00768E16 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E74F8D1AD063F0C744AAD9D /* Pods-DemoSuperApp.release.xcconfig */;
+			baseConfigurationReference = 695E4BFB7A78264D3499D42A /* Pods-DemoSuperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

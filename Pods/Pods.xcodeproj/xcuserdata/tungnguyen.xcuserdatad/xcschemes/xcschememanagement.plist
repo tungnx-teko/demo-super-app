@@ -79,12 +79,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hestia.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HestiaIOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>JVFloatLabeledTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Janus.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -190,6 +205,11 @@
 			<false/>
 		</dict>
 		<key>TripiCommon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TripiFlightConnector.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

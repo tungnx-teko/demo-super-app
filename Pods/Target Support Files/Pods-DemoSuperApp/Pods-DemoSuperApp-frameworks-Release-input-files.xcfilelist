@@ -12,8 +12,11 @@ ${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework
 ${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework
 ${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
+${PODS_ROOT}/Hestia/Hestia.framework
+${PODS_ROOT}/HestiaIOS/HestiaIOS.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework
+${PODS_ROOT}/Janus/Janus.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
@@ -34,5 +37,6 @@ ${PODS_ROOT}/Terra/Terra.framework
 ${PODS_ROOT}/TerraInstancesManager/TerraInstancesManager.framework
 ${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
 ${PODS_ROOT}/TripiCommon/TripiCommon.framework
+${PODS_ROOT}/TripiFlightConnector/TripiFlightConnector.framework
 ${PODS_ROOT}/TripiFlightKit/TripiFlightKit.framework
 ${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework
