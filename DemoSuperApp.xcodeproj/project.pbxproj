@@ -28,8 +28,6 @@
 		1A423ED62580E9DF00768E16 /* HestiaIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED42580E9DF00768E16 /* HestiaIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A423EDE2580F06A00768E16 /* TekCoreUploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */; };
 		1A423EDF2580F06A00768E16 /* TekCoreUploader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1A423EE3258139D600768E16 /* VnshopSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED72580EB8C00768E16 /* VnshopSdk.framework */; };
-		1A423EE4258139D600768E16 /* VnshopSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A423ED72580EB8C00768E16 /* VnshopSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +42,6 @@
 				1A423EC82580E6C400768E16 /* Hestia.framework in Embed Frameworks */,
 				1A423EC42580E26B00768E16 /* Janus.framework in Embed Frameworks */,
 				1A423ED32580E9CE00768E16 /* TripiFlightConnector.framework in Embed Frameworks */,
-				1A423EE4258139D600768E16 /* VnshopSdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +87,6 @@
 				1A423EC72580E6C300768E16 /* Hestia.framework in Frameworks */,
 				1A423EC32580E26B00768E16 /* Janus.framework in Frameworks */,
 				1A423ED52580E9DF00768E16 /* HestiaIOS.framework in Frameworks */,
-				1A423EE3258139D600768E16 /* VnshopSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
