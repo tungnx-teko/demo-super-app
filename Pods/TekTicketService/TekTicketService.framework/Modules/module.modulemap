@@ -1,0 +1,11 @@
+framework module TekTicketService {
+  umbrella header "TekTicketService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekTicketService.Swift {
+    header "TekTicketService-Swift.h"
+    requires objc
+}

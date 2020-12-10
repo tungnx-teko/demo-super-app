@@ -1,0 +1,76 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekDiscoveryService
+import Foundation
+import Swift
+import TekCoreNetwork
+import TekCoreService
+@_exported import TekDiscoveryService
+import TekServiceInterfaces
+import TerraInstancesManager
+@_inheritsConvenienceInitializers public class DiscoveryConfigConverter : TekCoreService.BaseServiceConverter<TekDiscoveryService.DiscoveryConfig> {
+  override public func convertConfig(rawValue: [Swift.String : Any]) -> TekDiscoveryService.DiscoveryConfig
+  @objc deinit
+  required public init(input: [Swift.String : Any])
+}
+public class KeywordsService : TekCoreService.CoreService, TekServiceInterfaces.IDiscoverySearchKeywordsService {
+  public var url: Foundation.URL
+  public var serviceCredential: TekCoreService.ServicesCredential?
+  public init(url: Foundation.URL, terminalCode: Swift.String, credential: TekCoreService.ServicesCredential?, errorDelegate: TekCoreService.ServicesErrorDelegate?)
+  public func searchKeywords(query: Swift.String, completion: @escaping TekServiceInterfaces.DiscoveryKeywordsResponseHandler)
+  @objc deinit
+}
+public class DiscoveryServiceInstanceGenerator : TerraInstancesManager.ServiceInstanceGeneratable {
+  public typealias InstanceType = TekDiscoveryService.DiscoveryService
+  public typealias ServiceFactory = TekDiscoveryService.DiscoveryServiceFactory
+  required public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TerraDiscoverySingleton : TerraInstancesManager.InstancesManageable {
+  public typealias Generator = TekDiscoveryService.DiscoveryServiceInstanceGenerator
+  public static var shared: TekDiscoveryService.TerraDiscoverySingleton
+  public var instances: [Swift.String : TekDiscoveryService.DiscoveryService]
+  @objc deinit
+}
+public var TerraDiscovery: TekDiscoveryService.TerraDiscoverySingleton
+public struct SearchProductParam : Swift.Encodable {
+  public var terminalCode: Swift.String?
+  public var query: Swift.String?
+  public var filter: TekServiceInterfaces.SearchFilter?
+  public var pagination: TekServiceInterfaces.SearchPagination?
+  public var sorting: TekServiceInterfaces.SearchSorting?
+  public var userId: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var location: Swift.String?
+  public var returnFilterable: [TekServiceInterfaces.ReturnFilterable]
+  public var block: TekServiceInterfaces.SearchBlock?
+  public init()
+  public init(query: Swift.String = "", terminalCode: Swift.String? = nil, filter: TekServiceInterfaces.SearchFilter? = nil, pagination: TekServiceInterfaces.SearchPagination? = nil, sorting: TekServiceInterfaces.SearchSorting? = nil, userId: Swift.String? = nil, phoneNumber: Swift.String? = nil, location: Swift.String? = nil, returnFilterable: [TekServiceInterfaces.ReturnFilterable] = [], block: TekServiceInterfaces.SearchBlock? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  public func toDictionary() -> [Swift.String : Any]?
+}
+public struct DiscoveryConfig {
+}
+public class DiscoveryService : TekCoreService.BasicWorkerService, TekServiceInterfaces.IDiscoveryService {
+  public var terminalCode: Swift.String
+  public init(url: Foundation.URL, terminalCode: Swift.String, credential: TekCoreService.ServicesCredential?, errorDelegate: TekCoreService.ServicesErrorDelegate?)
+  public func blocks(userId: Swift.String?, phone: Swift.String?, pageType: Swift.String?, completion: @escaping TekServiceInterfaces.BlockResponseHandler)
+  public func searchProducts(query: Swift.String, block: TekServiceInterfaces.SearchBlock, filter: TekServiceInterfaces.SearchFilter? = nil, sorting: TekServiceInterfaces.SearchSorting? = nil, pagination: TekServiceInterfaces.SearchPagination? = SearchPagination(pageNumber: 1, itemsPerPage: 20), location: Swift.String? = nil, returnFilterable: [TekServiceInterfaces.ReturnFilterable] = [], userId: Swift.String? = nil, phone: Swift.String? = nil, handler: @escaping TekServiceInterfaces.SearchProductHandler)
+  public func getProductDetail(sku: Swift.String, location: Swift.String? = nil, handler: @escaping TekServiceInterfaces.GetProductDetailHandler)
+  public func getListProductDetail(skus: [Swift.String], location: Swift.String? = nil, handler: @escaping TekServiceInterfaces.GetListProductDetailHandler)
+  public func searchKeywords(query: Swift.String, completion: @escaping TekServiceInterfaces.DiscoveryKeywordsResponseHandler)
+  @objc deinit
+  override public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = super, errorDelegate: TekCoreService.ServicesErrorDelegate? = super)
+}
+public class DiscoveryServiceFactory : TekCoreService.ServiceBuildable, TekCoreService.ServiceConverterSupportable, TekCoreService.ServiceCredentialAttachable, TekCoreService.ServiceErrorDelegateAttachable {
+  public typealias ServiceConverter = TekDiscoveryService.DiscoveryConfigConverter
+  public var serviceName: Swift.String
+  public var rawConfig: [Swift.String : Any]
+  public var credential: TekCoreService.ServicesCredential?
+  weak public var errorDelegate: TekCoreService.ServicesErrorDelegate?
+  required public init()
+  public func withErrorDelegate(_ delegate: TekCoreService.ServicesErrorDelegate)
+  public func withCredential(_ credential: TekCoreService.ServicesCredential)
+  public func createService() throws -> TekCoreService.CoreService
+  @objc deinit
+}

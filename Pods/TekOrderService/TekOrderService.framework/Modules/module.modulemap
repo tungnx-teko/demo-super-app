@@ -1,0 +1,11 @@
+framework module TekOrderService {
+  umbrella header "TekOrderService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekOrderService.Swift {
+    header "TekOrderService-Swift.h"
+    requires objc
+}

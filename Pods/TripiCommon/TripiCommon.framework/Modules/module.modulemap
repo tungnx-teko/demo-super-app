@@ -1,0 +1,4 @@
+framework module TripiCommon {
+  header "TripiCommon-Swift.h"
+  requires objc
+}

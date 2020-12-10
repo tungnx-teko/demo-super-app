@@ -1,0 +1,6 @@
+framework module TekoTracker {
+  umbrella header "TekoTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}

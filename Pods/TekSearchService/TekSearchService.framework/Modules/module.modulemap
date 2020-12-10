@@ -1,0 +1,11 @@
+framework module TekSearchService {
+  umbrella header "TekSearchService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekSearchService.Swift {
+    header "TekSearchService-Swift.h"
+    requires objc
+}

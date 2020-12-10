@@ -1,0 +1,11 @@
+framework module TekLocationService {
+  umbrella header "TekLocationService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekLocationService.Swift {
+    header "TekLocationService-Swift.h"
+    requires objc
+}

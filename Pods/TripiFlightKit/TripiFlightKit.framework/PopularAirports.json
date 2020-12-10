@@ -1,0 +1,224 @@
+{
+  "locations": [
+    {
+      "name": "Miền Bắc",
+      "airports": [
+        {
+          "name": "Sân bay Nội Bài",
+          "code": "HAN",
+          "location": "Hà Nội, VN"
+        },
+        {
+          "name": "Sân bay Cát Bi",
+          "code": "HPH",
+          "location": "Hải Phòng, VN"
+        }
+      ]
+    },
+    {
+      "name": "Miền Nam",
+      "airports": [
+        {
+          "name": "Sân bay Tân Sơn Nhất",
+          "code": "SGN",
+          "location": "Thành phố Hồ Chí Minh, VN"
+        },
+        {
+          "name": "Phú Quốc",
+          "code": "PQC",
+          "location": "Phú Quốc, VN"
+        },
+        {
+          "name": "Nha Trang Cam Ranh",
+          "code": "CXR",
+          "location": "Nha Trang, VN"
+        },
+        {
+          "name": "Côn Đảo",
+          "code": "VCS",
+          "location": "Côn Đảo, VN"
+        },
+        {
+          "name": "Đà Lạt",
+          "code": "DLI",
+          "location": "Đà Lạt, VN"
+        },
+        {
+          "name": "Quy Nhơn",
+          "code": "UIH",
+          "location": "Quy Nhơn, VN"
+        }
+      ]
+    },
+    {
+      "name": "Miền Trung",
+      "airports": [
+        {
+          "name": "Đà Nẵng",
+          "code": "DAD",
+          "location": "Đà Nẵng, VN"
+        },
+        {
+          "name": "Huế",
+          "code": "HUI",
+          "location": "Huế, VN"
+        },
+        {
+          "name": "Đồng Hới",
+          "code": "VDH",
+          "location": "Đồng Hới, VN"
+        },
+        {
+          "name": "Vinh",
+          "code": "VII",
+          "location": "Thành phố Vinh, VN"
+        }
+      ]
+    },
+    {
+      "name": "Đông Nam Á",
+      "airports": [
+        {
+          "name": "Bangkok Suvarnabhumi International Airport",
+          "code": "BKK",
+          "location": "Bangkok, TH"
+        },
+        {
+          "name": "Jakarta Soekarno-Hatta",
+          "code": "CGK",
+          "location": "Jakarta, ID"
+        },
+        {
+          "name": "Kuala Lumpur International Airport",
+          "code": "KUL",
+          "location": "Kuala Lumpur, MY"
+        },
+        {
+          "name": "Singapore Changi Airport",
+          "code": "SIN",
+          "location": "Singapore, SG"
+        },
+        {
+          "name": "Manila Ninoy Aquino International Airport",
+          "code": "MNL",
+          "location": "Manila, PH"
+        },
+        {
+          "name": "Vientiane Airport",
+          "code": "VTE",
+          "location": "Vientiane, LA"
+        },
+        {
+          "name": "Phnom Penh Airport",
+          "code": "PHN",
+          "location": "Phnom Penh, KH"
+        }
+      ]
+    },
+    {
+      "name": "Đông Bắc Á",
+      "airports": [
+        {
+          "name": "Tokyo Narita",
+          "code": "NRT",
+          "location": "Tokyo, JP"
+        },
+        {
+          "name": "Quốc tế Osaka Kansai",
+          "code": "KIX",
+          "location": "Osaka, JP"
+        },
+        {
+          "name": "Sân bay Quốc tế Seoul Incheon",
+          "code": "ICN",
+          "location": "Seoul, KR"
+        },
+        {
+          "name": "Beijing Capital",
+          "code": "PEK",
+          "location": "Bắc Kinh, CN"
+        },
+        {
+          "name": "Shanghai Pu Dong",
+          "code": "PVG",
+          "location": "Thượng Hải, CN"
+        },
+        {
+          "name": "Hongkong",
+          "code": "HKG",
+          "location": "Quốc tế Hong Kong, HK"
+        }
+      ]
+    },
+    {
+      "name": "Úc",
+      "airports": [
+        {
+          "name": "Sân bay Melbourne",
+          "code": "MEL",
+          "location": "Tullamarine, Victoria, Úc"
+        },
+        {
+          "name": "Sân bay Sydney",
+          "code": "SYD",
+          "location": "Sydney, Úc"
+        }
+      ]
+    },
+    {
+      "name": "Châu Âu",
+      "airports": [
+        {
+          "name": "Sân bay Amsterdam",
+          "code": "AMS",
+          "location": "Amsterdam, Hà Lan"
+        },
+        {
+          "name": "Barcelona",
+          "code": "BCN",
+          "location": "Tây Ban Nha"
+        },
+        {
+          "name": "Frankfurt",
+          "code": "FRA",
+          "location": "Đức"
+        },
+        {
+          "name": "London",
+          "code": "LHR",
+          "location": "Vương Quốc Anh"
+        },
+        {
+          "name": "Lyon",
+          "code": "LYS",
+          "location": "Pháp"
+        },
+        {
+          "name": "Madrid",
+          "code": "MAD",
+          "location": "Tây Ban Nha"
+        },
+        {
+          "name": "Marseille",
+          "code": "MRS",
+          "location": "Pháp"
+        },
+        {
+          "name": "Montpellier",
+          "code": "MPL",
+          "location": "Pháp"
+        },
+        {
+          "name": "Moscow",
+          "code": "DME",
+          "location": "Nga"
+        },
+        {
+          "name": "Nice",
+          "code": "NCE",
+          "location": "Pháp"
+        }
+      ]
+    }
+  ]
+}

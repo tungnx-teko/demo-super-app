@@ -1,0 +1,11 @@
+framework module TekPolicyService {
+  umbrella header "TekPolicyService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekPolicyService.Swift {
+    header "TekPolicyService-Swift.h"
+    requires objc
+}

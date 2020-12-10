@@ -1,0 +1,118 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekOrderService
+import Foundation
+import Swift
+import TekCoreNetwork
+import TekCoreService
+@_exported import TekOrderService
+import TekServiceInterfaces
+import TerraInstancesManager
+public struct OrderConfig {
+  public var url: Swift.String
+  public var channel: Swift.String?
+  public var channelId: Swift.Int?
+  public var channelType: Swift.String?
+  public var terminalCode: Swift.String?
+}
+@_inheritsConvenienceInitializers public class OrderConfigConverter : TekCoreService.BaseServiceConverter<TekOrderService.OrderConfig> {
+  override public func convertConfig(rawValue: [Swift.String : Any]) -> TekOrderService.OrderConfig
+  @objc deinit
+  required public init(input: [Swift.String : Any])
+}
+@_hasMissingDesignatedInitializers public class OrderService : TekCoreService.BasicWorkerService, TekServiceInterfaces.IOrderService {
+  public var channel: Swift.String {
+    get
+  }
+  public var channelId: Swift.Int {
+    get
+  }
+  public var channelType: Swift.String {
+    get
+  }
+  public var terminalCode: Swift.String {
+    get
+  }
+  public func getOrder(id: Swift.String, completion: @escaping TekServiceInterfaces.OrderHandler)
+  public func queryOrder(id: Swift.String, completion: @escaping TekServiceInterfaces.OrderHandler)
+  public func getOrderList(creatorId: Swift.String, orderCodes: [Swift.String], offset: Swift.Int, limit: Swift.Int, completion: @escaping TekServiceInterfaces.OrderListHandler)
+  public func getMarketOrderList(creatorId: Swift.String, orderCodes: [Swift.String], offset: Swift.Int, limit: Swift.Int, completion: @escaping TekServiceInterfaces.OrderListHandler)
+  public func cancelChildOrder(id: Swift.String, completion: @escaping TekServiceInterfaces.CancelOrderHandler)
+  public func cancelMarketOrder(id: Swift.String, completion: @escaping TekServiceInterfaces.CancelOrderHandler)
+  public func createMarketOrder(payload: TekServiceInterfaces.OrderCreatePayload, completion: @escaping TekServiceInterfaces.MarketOrderCreateHandler)
+  public func getMarketOrder(id: Swift.String, completion: @escaping TekServiceInterfaces.MarketOrderGetHandler)
+  public func confirmPayment(id: Swift.String, payload: TekServiceInterfaces.MarketOrderConfirmPaymentPayload, completion: @escaping TekServiceInterfaces.MarketOrderConfirmPaymentHandler)
+  @objc deinit
+  override public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = super, errorDelegate: TekCoreService.ServicesErrorDelegate? = super)
+}
+@_inheritsConvenienceInitializers public class OMCode : TekCoreNetwork.TekoIntCode {
+  @objc override dynamic public var successCode: Swift.Int {
+    @objc get
+  }
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  override public init(code: Swift.Int?, message: Swift.String?)
+}
+@_hasMissingDesignatedInitializers public class MarketOrderCreateResponse : TekCoreNetwork.BaseResponse<TekOrderService.OMCode> {
+  final public let data: TekOrderService.MarketOrderCreateResult?
+  final public let error: TekOrderService.MarketOrderError?
+  @objc deinit
+  override public init(code: TekOrderService.OMCode)
+}
+public struct MarketOrderCreateResult : TekServiceInterfaces.IMarketOrderCreateResult, Swift.Decodable {
+  public var grandTotal: Swift.Double?
+  public let id: Swift.String?, code: Swift.String?, state: Swift.String?
+  public let childOrders: [TekServiceInterfaces.IMarketChildOrder]
+  public var items: [TekServiceInterfaces.IOrderItem]
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class MarketOrderConfirmPaymentResponse : TekCoreNetwork.BaseResponse<TekOrderService.OMCode> {
+  final public let data: TekOrderService.MarketOrderCreateResult?
+  final public let error: TekOrderService.MarketOrderError?
+  @objc deinit
+  override public init(code: TekOrderService.OMCode)
+}
+public class OrderServiceFactory : TekCoreService.ServiceBuildable, TekCoreService.ServiceConverterSupportable, TekCoreService.ServiceCredentialAttachable, TekCoreService.ServiceErrorDelegateAttachable {
+  public typealias ServiceConverter = TekOrderService.OrderConfigConverter
+  public var rawConfig: [Swift.String : Any]
+  public var serviceName: Swift.String
+  public var credential: TekCoreService.ServicesCredential?
+  weak public var errorDelegate: TekCoreService.ServicesErrorDelegate?
+  required public init()
+  public func withErrorDelegate(_ delegate: TekCoreService.ServicesErrorDelegate)
+  public func withCredential(_ credential: TekCoreService.ServicesCredential)
+  public func createService() throws -> TekCoreService.CoreService
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MarketOrderGetResponse : TekCoreNetwork.BaseResponse<TekOrderService.OMCode> {
+  public var data: TekServiceInterfaces.IOrderListItem?
+  @objc deinit
+  override public init(code: TekOrderService.OMCode)
+}
+public struct MarketOrderError : TekServiceInterfaces.IMarketOrderError, Swift.Decodable {
+  public let message: Swift.String?
+  public let detail: Swift.String?
+  public let details: [TekServiceInterfaces.IMarketOrderErrorDetail]
+  public init(from decoder: Swift.Decoder) throws
+}
+extension MarketOrderError {
+  public struct Detail : TekServiceInterfaces.IMarketOrderErrorDetail, Swift.Decodable {
+    public let code: Swift.String?
+    public let message: Swift.String?
+    public let orderId: Swift.String?
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+public class OrderServiceInstanceGenerator : TerraInstancesManager.ServiceInstanceGeneratable {
+  public typealias InstanceType = TekOrderService.OrderService
+  public typealias ServiceFactory = TekOrderService.OrderServiceFactory
+  required public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TerraOrderSingleton : TerraInstancesManager.InstancesManageable {
+  public typealias Generator = TekOrderService.OrderServiceInstanceGenerator
+  public static var shared: TekOrderService.TerraOrderSingleton
+  public var instances: [Swift.String : TekOrderService.OrderService]
+  @objc deinit
+}
+public var TerraOrder: TekOrderService.TerraOrderSingleton

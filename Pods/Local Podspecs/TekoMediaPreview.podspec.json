@@ -1,0 +1,32 @@
+{
+  "name": "TekoMediaPreview",
+  "version": "0.1.0",
+  "summary": "A short description of TekoMediaPreview.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dungntm-teko/TekoMediaPreview",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dungntm-teko": "dung.ntm1@teko.vn"
+  },
+  "source": {
+    "git": "https://github.com/dungntm-teko/TekoMediaPreview.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "TekoMediaPreview/Source/**/*",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation",
+    "Photos"
+  ],
+  "dependencies": {
+    "Kingfisher": [
+
+    ]
+  }
+}

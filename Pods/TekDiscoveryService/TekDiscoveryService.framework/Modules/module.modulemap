@@ -1,0 +1,11 @@
+framework module TekDiscoveryService {
+  umbrella header "TekDiscoveryService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekDiscoveryService.Swift {
+    header "TekDiscoveryService-Swift.h"
+    requires objc
+}

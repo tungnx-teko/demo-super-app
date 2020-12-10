@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EventModel" representedClassName="EventModel" syncable="YES">
+        <attribute name="createdAt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="data" attributeType="Binary"/>
+        <attribute name="eventName" attributeType="String"/>
+        <attribute name="eventType" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="schemaName" attributeType="String"/>
+    </entity>
+    <entity name="EventRequestModel" representedClassName="EventRequestModel" syncable="YES">
+        <attribute name="appID" attributeType="String"/>
+        <attribute name="appVersion" optional="YES" attributeType="String"/>
+        <attribute name="eventCreatedAt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="schemaVersion" attributeType="String"/>
+        <attribute name="uploadStatus" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <relationship name="event" maxCount="1" deletionRule="Cascade" destinationEntity="EventModel"/>
+        <relationship name="networkInfo" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="NetworkConnectivityInfoModel"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SessionModel"/>
+        <relationship name="visitor" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="VisitorModel"/>
+    </entity>
+    <entity name="NetworkConnectivityInfoModel" representedClassName="NetworkConnectivityInfoModel" syncable="YES">
+        <attribute name="carrierName" attributeType="String"/>
+        <attribute name="ip" optional="YES" attributeType="String"/>
+        <attribute name="ipVer" optional="YES" attributeType="String"/>
+        <attribute name="networkType" attributeType="String"/>
+        <attribute name="phoneNumber" attributeType="String"/>
+    </entity>
+    <entity name="SessionModel" representedClassName="SessionModel" syncable="YES">
+        <attribute name="branchName" attributeType="String"/>
+        <attribute name="createdAt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="lastActiveAt" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="modelName" attributeType="String"/>
+        <attribute name="offset" attributeType="String"/>
+        <attribute name="osVersion" attributeType="String"/>
+        <attribute name="resolution" attributeType="String"/>
+        <attribute name="timezone" attributeType="String"/>
+    </entity>
+    <entity name="VisitorModel" representedClassName="VisitorModel" syncable="YES">
+        <attribute name="clientID" attributeType="String"/>
+        <attribute name="userID" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="EventModel" positionX="-418.54296875" positionY="-285.40234375" width="128" height="133"/>
+        <element name="EventRequestModel" positionX="-26.9296875" positionY="-160.3046875" width="128" height="28"/>
+        <element name="NetworkConnectivityInfoModel" positionX="62.72265625" positionY="-501.26953125" width="128" height="118"/>
+        <element name="SessionModel" positionX="176.62109375" positionY="-338.99609375" width="128" height="178"/>
+        <element name="VisitorModel" positionX="-183.3203125" positionY="-333.9453125" width="128" height="73"/>
+    </elements>
+</model>

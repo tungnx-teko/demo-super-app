@@ -1,0 +1,36 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekCoreUploader
+import Alamofire
+import Foundation
+import Swift
+import TekCoreNetwork
+@_exported import TekCoreUploader
+public enum UploadedFileType : Swift.String {
+  case png
+  case jpeg
+  case mp4
+  case mov
+  case wmv
+  case mpg
+  public var `extension`: Swift.String {
+    get
+  }
+  public var mimeType: Swift.String {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct UploadedData {
+  public var data: Foundation.Data
+  public var type: TekCoreUploader.UploadedFileType
+  public init(data: Foundation.Data, type: TekCoreUploader.UploadedFileType)
+}
+extension CoreAPIManager {
+  open func upload<T, V>(_ request: T, paths: [Swift.String], onSuccess: @escaping (V) -> Swift.Void, onError: @escaping (Swift.Error, V?) -> Swift.Void) where T : TekCoreNetwork.BaseRequestProtocol, V : Swift.Decodable, V == T.ResponseType
+  open func upload<T, V>(_ request: T, datas: [TekCoreUploader.UploadedData], onSuccess: @escaping (V) -> Swift.Void, onError: @escaping (Swift.Error, V?) -> Swift.Void) where T : TekCoreNetwork.BaseRequestProtocol, V : Swift.Decodable, V == T.ResponseType
+}

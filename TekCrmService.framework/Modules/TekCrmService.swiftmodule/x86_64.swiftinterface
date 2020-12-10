@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekCrmService
+import Foundation
+import Swift
+import TekCoreNetwork
+import TekCoreService
+@_exported import TekCrmService
+import TekServiceInterfaces
+import TerraInstancesManager
+public class CrmServiceInstanceGenerator : TerraInstancesManager.ServiceInstanceGeneratable {
+  public typealias InstanceType = TekCrmService.CrmService
+  public typealias ServiceFactory = TekCrmService.CrmServiceFactory
+  required public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TerraCrmSingleton : TerraInstancesManager.InstancesManageable {
+  public typealias Generator = TekCrmService.CrmServiceInstanceGenerator
+  public static var shared: TekCrmService.TerraCrmSingleton
+  public var instances: [Swift.String : TekCrmService.CrmService]
+  @objc deinit
+}
+public var TerraCrm: TekCrmService.TerraCrmSingleton
+@_inheritsConvenienceInitializers public class CrmConfigConverter : TekCoreService.BaseServiceConverter<TekCrmService.CrmConfig> {
+  override public func convertConfig(rawValue: [Swift.String : Any]) -> TekCrmService.CrmConfig
+  @objc deinit
+  required public init(input: [Swift.String : Any])
+}
+public struct CrmConfig {
+  public var url: Swift.String
+}
+@_inheritsConvenienceInitializers public class CrmService : TekCoreService.BasicWorkerService, TekServiceInterfaces.ICrmService {
+  public func getCustomer(id: Swift.String, completion: @escaping TekServiceInterfaces.CrmResponseHandler)
+  public func addAddressToCustomer(id: Swift.String, contact: TekServiceInterfaces.ICrmContact, completion: @escaping TekServiceInterfaces.CrmResponseHandler)
+  public func create(payload: TekServiceInterfaces.ICrmPayload, completion: @escaping TekServiceInterfaces.CrmResponseHandler)
+  public func deleteContact(id: Swift.String, contact: TekServiceInterfaces.ICrmContact, completion: @escaping (Swift.Bool) -> ())
+  @objc deinit
+  override public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = super, errorDelegate: TekCoreService.ServicesErrorDelegate? = super)
+}
+public class CrmServiceFactory : TekCoreService.ServiceBuildable, TekCoreService.ServiceConverterSupportable, TekCoreService.ServiceErrorDelegateAttachable {
+  public typealias ServiceConverter = TekCrmService.CrmConfigConverter
+  public var rawConfig: [Swift.String : Any]
+  public var serviceName: Swift.String
+  weak public var errorDelegate: TekCoreService.ServicesErrorDelegate?
+  required public init()
+  public func withErrorDelegate(_ delegate: TekCoreService.ServicesErrorDelegate)
+  public func createService() throws -> TekCoreService.CoreService
+  @objc deinit
+}

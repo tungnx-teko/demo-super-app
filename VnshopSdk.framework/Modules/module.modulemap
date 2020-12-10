@@ -1,0 +1,17 @@
+framework module VnshopSdk {
+  umbrella header "VnshopSdk.h"
+  
+  header "iCarousel.h"
+  header "MBProgressHUD.h"
+  header "CustomTextView.h"
+  header "CustomButton.h"
+  header "DelegateProxy.h"
+  
+  export *
+  module * { export * }
+}
+
+module VnshopSdk.Swift {
+    header "VnshopSdk-Swift.h"
+    requires objc
+}

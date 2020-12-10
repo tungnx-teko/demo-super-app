@@ -1,0 +1,57 @@
+//
+//  Staging.xcconfig
+//  VNShop
+//
+//  Created by linhvt on 9/10/19.
+//  Copyright © 2019 Dung Nguyen. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// APP
+APP_NAME = VnShop_Staging
+APP_BUNDLE_ID = vn.vnshop.ios.shopping.staging
+APP_SCHEME = vnshop.ios.staging
+
+// API
+API_SEARCH_URL = https:/$()/search.stage.tekoapis.net/api
+API_PAGE_BUILDER_URL = https:/$()/pagebuilder-dev.phongvu.vn/api/v1
+API_NOTIFICATION_URL = https:/$()/stn.develop.tekoapis.net/api
+API_USER_URL = https:/$()/users.stage.tekoapis.net
+API_OAUTH_URL = https:/$()/oauth.stage.tekoapis.net
+API_ADDRESS_URL = https:/$()/location.stage.tekoapis.net/api/v1/location
+API_IAM_URL = https:/$()/id.teko.vn
+API_CATALOG_URL = https:/$()/catalog.stage.tekoapis.net
+API_ORDER_URL = https:/$()/orders.stage.tekoapis.net
+API_PAYMENT_URL = https:/$()/payment.stage.tekoapis.net/api
+API_PPM_URL = https:/$()/ppm.stage.tekoapis.net/api
+API_CRM_URL = https:/$()/test-crm.teko.vn/api
+API_LISTING_URL = https:/$()/listing.stage.tekoapis.net/api
+API_IDENTITY_URL = https:/$()/identity.stage.tekoapis.net
+API_IMAGE_URL = https:/$()/img.vnshop.vn
+API_DISCOVERY_URL = https:/$()/discovery.stag.tekoapis.net/api/v1
+API_POLICY_URL = http:/$()/policies.stag.tekoapis.net/api/v1
+API_CC_URL = https:/$()/cc-vnshop.stag.tekoapis.net/api/v1
+API_CARTS_URL = https:/$()/carts.stag.tekoapis.net/api/v1
+API_PAYMENT_AIO_URL = https:/$()/payment-setting.stag.tekoapis.net/api
+
+// OAUTH
+OAUTH_CLIENT_ID = b631a62cea4e48a180f6a866c9aa7796
+CLIENT_CODE = vnshop
+
+// GOOGLE SERVICES
+GMS_API_KEY = AIzaSyBwuZstyQQezrsd-K4kZFW_o81h2mYizAs
+GOOGLE_SIGNIN_CLIENT_ID = 563692749265-7d1vdgcj20ltdb61torp9n76mmsi2907.apps.googleusercontent.com
+GOOGLE_SIGNIN_REVERSED_CLIENT_ID = com.googleusercontent.apps.563692749265-7d1vdgcj20ltdb61torp9n76mmsi2907
+
+// FACEBOOK
+FACEBOOK_APP_ID = 125959422141515
+FACEBOOK_DISPLAY_NAME = VNShop
+FACEBOOK_SCHEME = fb125959422141515
+
+// PAYMENT
+API_PAYMENT_SECRET_KEY = e825d74cbc6ad6330a25f5a731486c8a
+
+// BANNER
+BANNER_HOME_XTOKEN_KEY = QETEKOF6416C75C866FDB348EABB

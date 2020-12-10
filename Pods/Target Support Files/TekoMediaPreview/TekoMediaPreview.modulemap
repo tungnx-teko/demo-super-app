@@ -1,0 +1,6 @@
+framework module TekoMediaPreview {
+  umbrella header "TekoMediaPreview-umbrella.h"
+
+  export *
+  module * { export * }
+}

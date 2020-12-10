@@ -1,0 +1,46 @@
+{
+  "name": "FirebasePlugin",
+  "version": "0.1.2",
+  "summary": "Firebase Helper Module for VnShop-project clusters",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/teko-vn/firebase-plugin-ios",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "linhvt-teko": "linh.vt@teko.vn"
+  },
+  "source": {
+    "git": "https://github.com/teko-vn/firebase-plugin-ios.git",
+    "tag": "0.1.2"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "FirebasePlugin/Module/**/*.{swift}",
+  "static_framework": true,
+  "dependencies": {
+    "Firebase/Auth": [
+
+    ],
+    "Firebase/Crashlytics": [
+
+    ],
+    "Firebase/Database": [
+
+    ],
+    "Firebase/Messaging": [
+
+    ],
+    "Firebase/Analytics": [
+
+    ],
+    "Firebase/RemoteConfig": [
+
+    ],
+    "Firebase/DynamicLinks": [
+
+    ]
+  }
+}

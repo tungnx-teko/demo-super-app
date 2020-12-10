@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekLocationService
+import Foundation
+import Swift
+import TekCoreNetwork
+import TekCoreService
+@_exported import TekLocationService
+import TekServiceInterfaces
+import TerraInstancesManager
+public class LocationServiceFactory : TekCoreService.ServiceBuildable, TekCoreService.ServiceConverterSupportable, TekCoreService.ServiceErrorDelegateAttachable {
+  public typealias ServiceConverter = TekLocationService.LocationConfigConverter
+  public var rawConfig: [Swift.String : Any]
+  public var serviceName: Swift.String
+  weak public var errorDelegate: TekCoreService.ServicesErrorDelegate?
+  required public init()
+  public func withErrorDelegate(_ delegate: TekCoreService.ServicesErrorDelegate)
+  public func createService() throws -> TekCoreService.CoreService
+  @objc deinit
+}
+public class LocationServiceInstanceGenerator : TerraInstancesManager.ServiceInstanceGeneratable {
+  public typealias InstanceType = TekLocationService.LocationService
+  public typealias ServiceFactory = TekLocationService.LocationServiceFactory
+  required public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TerraLocationSingleton : TerraInstancesManager.InstancesManageable {
+  public typealias Generator = TekLocationService.LocationServiceInstanceGenerator
+  public static var shared: TekLocationService.TerraLocationSingleton
+  public var instances: [Swift.String : TekLocationService.LocationService]
+  @objc deinit
+}
+public var TerraLocation: TekLocationService.TerraLocationSingleton
+@_inheritsConvenienceInitializers public class LocationConfigConverter : TekCoreService.BaseServiceConverter<TekLocationService.LocationConfig> {
+  override public func convertConfig(rawValue: [Swift.String : Any]) -> TekLocationService.LocationConfig
+  @objc deinit
+  required public init(input: [Swift.String : Any])
+}
+public struct LocationConfig {
+  public var url: Swift.String
+}
+@_inheritsConvenienceInitializers public class LocationService : TekCoreService.BasicWorkerService, TekServiceInterfaces.ILocationService {
+  public func getProvinceList(handler: @escaping TekServiceInterfaces.GetAddressListHandler)
+  public func getDistrictList(provinceCode: Swift.String, handler: @escaping TekServiceInterfaces.GetAddressListHandler)
+  public func getWardList(districtCode: Swift.String, handler: @escaping TekServiceInterfaces.GetAddressListHandler)
+  public func getWardDetail(wardCode: Swift.String, handler: @escaping TekServiceInterfaces.GetWardDetailHandler)
+  @objc deinit
+  override public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = super, errorDelegate: TekCoreService.ServicesErrorDelegate? = super)
+}

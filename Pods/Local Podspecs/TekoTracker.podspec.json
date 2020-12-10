@@ -1,0 +1,64 @@
+{
+  "name": "TekoTracker",
+  "version": "0.4",
+  "summary": "A short description of TekoTracker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/teko-vn/tracker-ios",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dũng Nguyễn": "dung.ntm1@teko.vn"
+  },
+  "source": {
+    "git": "https://github.com/teko-vn/tracker-ios.git",
+    "tag": "0.4"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "swift_versions": "5.1",
+  "prefix_header_file": false,
+  "module_name": "TekoTracker",
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "TekoTracker/Source/Core/**/*.{h,m,mm,swift,xcdatamodeld,xcmappingmodel}",
+      "resources": "TekoTracker/Source/Core/Storage/Resources/**/*.{xcdatamodeld,xcmappingmodel}",
+      "private_header_files": "TekoTracker/Source/Core/**/*+Internal.h",
+      "dependencies": {
+        "Alamofire": [
+
+        ],
+        "DeviceKit": [
+
+        ],
+        "ReachabilitySwift": [
+
+        ],
+        "RxSwift": [
+
+        ]
+      },
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "CoreData"
+      ]
+    },
+    {
+      "name": "Ecommerce",
+      "source_files": "TekoTracker/Source/Ecommerce/**/*.{h,m,mm,swift,xcdatamodeld,xcmappingmodel}",
+      "private_header_files": "TekoTracker/Source/Ecommerce/**/*+Internal.h",
+      "dependencies": {
+        "TekoTracker/Core": [
+
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.1"
+}

@@ -1,0 +1,11 @@
+framework module TekCrmService {
+  umbrella header "TekCrmService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekCrmService.Swift {
+    header "TekCrmService-Swift.h"
+    requires objc
+}

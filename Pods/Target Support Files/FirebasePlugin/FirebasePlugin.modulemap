@@ -1,0 +1,6 @@
+framework module FirebasePlugin {
+  umbrella header "FirebasePlugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

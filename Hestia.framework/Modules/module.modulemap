@@ -1,0 +1,11 @@
+framework module Hestia {
+  umbrella header "Hestia.h"
+
+  export *
+  module * { export * }
+}
+
+module Hestia.Swift {
+    header "Hestia-Swift.h"
+    requires objc
+}

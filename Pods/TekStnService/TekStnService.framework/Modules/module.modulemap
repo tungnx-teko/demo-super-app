@@ -1,0 +1,11 @@
+framework module TekStnService {
+  umbrella header "TekStnService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekStnService.Swift {
+    header "TekStnService-Swift.h"
+    requires objc
+}

@@ -1,0 +1,366 @@
+{
+    "attributes": [
+        {
+            "code": "spkhac_tinhnang",
+            "values": []
+        }
+    ],
+    "taxOut": 10,
+    "attributeGroups": [
+        {
+            "id": null,
+            "name": "Thương hiệu",
+            "value": "Khác",
+            "parentId": 2009,
+            "priority": 0
+        },
+        {
+            "id": null,
+            "name": "Bảo hành",
+            "value": "12",
+            "parentId": 2009,
+            "priority": 1
+        },
+        {
+            "id": 2009,
+            "name": "Cấu hình chi tiết",
+            "value": "",
+            "parentId": 0,
+            "priority": 1530
+        }
+    ],
+    "warranty": {
+        "months": 12,
+        "description": null
+    },
+    "createdAt": "2019-05-20T18:39:43+00:00",
+    "salePoint": 5,
+    "displayName": "",
+    "color": {
+        "code": null,
+        "name": null
+    },
+    "tags": [],
+    "promotionPrices": [],
+    "promotions": [
+        {
+            "channel": "all",
+            "terminal": null,
+            "definitions": [
+                {
+                    "id": 677,
+                    "startedAt": "2019-08-15T17:00:00+00:00",
+                    "endedAt": "2023-08-11T16:59:59+00:00",
+                    "name": "KM cho LAP - Kênh ĐL",
+                    "type": "product",
+                    "isDefault": true,
+                    "partner": "PHONGVU",
+                    "description": "Kênh ĐL",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": null
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": null,
+                        "money": [
+                            {
+                                "id": 653,
+                                "money": null,
+                                "percent": 10,
+                                "maxDiscount": 10000000,
+                                "discountType": "percent",
+                                "budgetId": 16,
+                                "budgetStatus": "active",
+                                "outOfBudget": false
+                            }
+                        ],
+                        "items": []
+                    }
+                },
+                {
+                    "id": 789,
+                    "startedAt": "2019-08-20T03:10:10+00:00",
+                    "endedAt": "2019-09-21T16:59:59+00:00",
+                    "name": "Trang test sp có coupon",
+                    "type": "coupon",
+                    "isDefault": false,
+                    "partner": "PHONGVU",
+                    "description": "ahihi",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": "B2S3"
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": null,
+                        "money": [
+                            {
+                                "id": 0,
+                                "money": 20000,
+                                "percent": null,
+                                "maxDiscount": null,
+                                "discountType": "money",
+                                "budgetId": 0,
+                                "budgetStatus": "inactive",
+                                "outOfBudget": false
+                            }
+                        ],
+                        "items": []
+                    }
+                },
+                {
+                    "id": 790,
+                    "startedAt": "2019-09-16T17:00:00+00:00",
+                    "endedAt": "2019-09-28T16:59:59+00:00",
+                    "name": "Trang test CTKM coupon giảm %",
+                    "type": "coupon",
+                    "isDefault": false,
+                    "partner": "PHONGVU",
+                    "description": "Trang test",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": "B2S7"
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": null,
+                        "money": [
+                            {
+                                "id": 730,
+                                "money": null,
+                                "percent": 5,
+                                "maxDiscount": 15000,
+                                "discountType": "percent",
+                                "budgetId": 6,
+                                "budgetStatus": "active",
+                                "outOfBudget": false
+                            }
+                        ],
+                        "items": []
+                    }
+                },
+                {
+                    "id": 792,
+                    "startedAt": "2019-09-17T17:00:00+00:00",
+                    "endedAt": "2019-09-27T16:59:59+00:00",
+                    "name": "Trang test voucher",
+                    "type": "product",
+                    "isDefault": false,
+                    "partner": "PHONGVU",
+                    "description": "ahihi",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": null
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": {
+                            "quantity": 1,
+                            "maxQuantity": 1,
+                            "budgetStatus": "active",
+                            "outOfBudget": false,
+                            "appliedPromotion": {
+                                "id": 780,
+                                "name": "CTKM điều kiện voucher 1709",
+                                "description": "CTKM điều kiện voucher 1709",
+                                "benefit": {
+                                    "money": [
+                                        {
+                                            "id": 726,
+                                            "money": null,
+                                            "percent": 5,
+                                            "maxDiscount": 1000000,
+                                            "discountType": "percent",
+                                            "budgetId": 17,
+                                            "budgetStatus": "active",
+                                            "outOfBudget": false
+                                        }
+                                    ],
+                                    "items": []
+                                }
+                            }
+                        },
+                        "money": null,
+                        "items": []
+                    }
+                },
+                {
+                    "id": 665,
+                    "startedAt": "2019-07-17T03:10:10+00:00",
+                    "endedAt": "2019-09-28T16:59:59+00:00",
+                    "name": "Km của Huy (ko áp dụng chồng)",
+                    "type": "product",
+                    "isDefault": false,
+                    "partner": "PHONGVU",
+                    "description": "cxcxcxc",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": null
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": null,
+                        "money": [
+                            {
+                                "id": 0,
+                                "money": 100000,
+                                "percent": null,
+                                "maxDiscount": null,
+                                "discountType": "money",
+                                "budgetId": 0,
+                                "budgetStatus": "active",
+                                "outOfBudget": false
+                            }
+                        ],
+                        "items": []
+                    }
+                },
+                {
+                    "id": 666,
+                    "startedAt": "2019-07-17T03:10:10+00:00",
+                    "endedAt": "2019-09-28T16:59:59+00:00",
+                    "name": "Copy of Km của Huy (ko áp dụng chồng)",
+                    "type": "product",
+                    "isDefault": false,
+                    "partner": "PHONGVU",
+                    "description": "cxcxcxc",
+                    "timeRanges": [],
+                    "condition": {
+                        "paymentMethods": [
+                            "all"
+                        ],
+                        "orderValueMin": null,
+                        "orderValueMax": null,
+                        "coupon": null
+                    },
+                    "applyOn": "product",
+                    "benefit": {
+                        "voucher": null,
+                        "money": [
+                            {
+                                "id": 0,
+                                "money": 100000,
+                                "percent": null,
+                                "maxDiscount": null,
+                                "discountType": "money",
+                                "budgetId": 0,
+                                "budgetStatus": "active",
+                                "outOfBudget": false
+                            }
+                        ],
+                        "items": [
+                            {
+                                "id": 102,
+                                "sku": "19060271",
+                                "name": "Loa thanh Soundbar Samsung 2.1 HW-K350 150W",
+                                "quantity": 1,
+                                "budgetId": 2,
+                                "budgetStatus": "active",
+                                "outOfBudget": false
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "flashSales": [],
+    "attributeSet": {
+        "id": 63,
+        "name": "Sản Phẩm Khác"
+    },
+    "categories": [
+        {
+            "id": 44,
+            "code": "04-N019",
+            "name": "Máy Quét Mã Vạch",
+            "level": 1,
+            "parentId": 0
+        },
+        {
+            "id": 556,
+            "code": "04-N019-99",
+            "name": "Máy Quét Mã Vạch Khác",
+            "level": 2,
+            "parentId": 44
+        }
+    ],
+    "magentoId": 14188,
+    "seoInfo": {
+        "metaKeyword": "",
+        "metaTitle": "",
+        "metaDescription": "",
+        "shortDescription": "",
+        "description": "<h2><strong>Ch&acirc;n đế m&aacute;y qu&eacute;t m&atilde; vạch Honeywell MS1900</strong></h2>\r\n<p><strong>Ch&acirc;n đế m&aacute;y qu&eacute;t m&atilde; vạch Honeywell MS1900</strong> được thiết kế bằng nhựa, m&agrave;u đen, với phần th&acirc;n cổ linh hoạt c&oacute; thể bẻ sang c&aacute;c hướng, được bọc bởi một lớp vỏ cao su gi&uacute;p bảo vệ phần th&acirc;n cổ ch&acirc;n đế. Gi&aacute; đỡ chắc chắn, với trọng lượng v&agrave; khả năng tương th&iacute;ch với hai loại m&aacute;y đọc m&atilde; vạch Xenon 1900G v&agrave; 1902G.&nbsp;Ch&acirc;n đế tiện dụng v&agrave; thanh lịch c&oacute; đế vững chắc, kh&ocirc;ng dễ bị hỏng.</p>\r\n<p><img class=\"aligncenter wp-image-2220 size-full\" style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tmp.phongvu.vn/wp-content/uploads/2018/09/Ch&acirc;n-đế-MS1900_2.jpg\" alt=\"\" width=\"840\" height=\"700\" /></p>\r\n<p>Việc sử dụng ch&acirc;n đế cho m&aacute;y qu&eacute;t m&atilde; vạch c&oacute; thể khiến c&ocirc;ng việc của tiện lợi hơn. Ch&acirc;n đế gi&uacute;p cho m&aacute;y qu&eacute;t tr&aacute;nh phải những trường hợp như rơi, d&iacute;nh nước. Ngo&agrave;i ra n&oacute; c&ograve;n gi&uacute;p cố định vị tr&iacute; của m&aacute;y qu&eacute;t tr&aacute;nh trường hợp khi bạn phải đi t&igrave;m. <strong>Ch&acirc;n đế m&aacute;y qu&eacute;t m&atilde; vạch Honeywell MS1900&nbsp;</strong>th&iacute;ch hợp khi sử dụng ở quầy thu ng&acirc;n hoặc b&agrave;n l&agrave;m việc gi&uacute;p cố định m&aacute;y qu&eacute;t để qu&eacute;t m&atilde; tự động. Chiều cao&nbsp;22.9 cm l&agrave; kh&aacute; hợp l&yacute; cho tầm tay của thu ng&acirc;n c&oacute; thể lấy m&aacute;y qu&eacute;t tiện lợi v&agrave; nhanh ch&oacute;ng. Hơn nữa,&nbsp;<strong>Ch&acirc;n đế m&aacute;y qu&eacute;t m&atilde; vạch Honeywell MS1900&nbsp;</strong>c&ograve;n hạn chế việc cầm, nắm m&aacute;y qu&eacute;t để tr&aacute;nh c&aacute;c tai nạn ngo&agrave;i &yacute; muốn xảy ra như m&aacute;y qu&eacute;t tuột khỏi tay người cầm. Với phần th&acirc;n linh hoạt, c&oacute; thể bẻ được mọi hướng gi&uacute;p cho việc qu&eacute;t m&atilde; linh hoạt hơn. C&oacute; thể n&oacute;i, việc d&ugrave;ng ch&acirc;n đế cho m&aacute;y qu&eacute;t m&atilde; vạch sẽ khiến c&ocirc;ng việc của bạn thuận tiện hơn, việc c&oacute; một chiếc ch&acirc;n đế sẽ gi&uacute;p cho bạn l&agrave;m việc một c&aacute;ch thoải m&aacute;i. Ngo&agrave;i ra bạn c&oacute; thể t&igrave;m hiểu th&ecirc;m về c&aacute;c loại m&aacute;y qu&eacute;t m&atilde; vạch tại:&nbsp;https://phongvu.vn/thiet-bi-van-phong/may-quet-ma-vach.cat</p>"
+    },
+    "rating": {
+        "averagePoint": 4.5,
+        "voteCount": 11
+    },
+    "allActiveFlashSales": [],
+    "sku": "1200591",
+    "name": "Bộ phận chân đế 1900",
+    "url": "bo-phan-chan-de-1900",
+    "brand": {
+        "code": "KHC",
+        "name": "Khác"
+    },
+    "status": {
+        "publish": true,
+        "sale": "hang_ban"
+    },
+    "objective": {
+        "code": "sale",
+        "name": "Hàng để bán"
+    },
+    "productType": {
+        "code": "product",
+        "name": "Sản phẩm có thể lưu trữ"
+    },
+    "images": [
+        {
+            "url": "https://img1.phongvu.vn/media/catalog/product/1/_/1_54_54.jpg",
+            "priority": 1
+        }
+    ],
+    "price": {
+        "supplierSalePrice": 950000,
+        "sellPrice": 950000
+    },
+    "productLine": {
+        "code": "NGH04",
+        "name": "Văn Phòng & Thiết bị An Ninh"
+    },
+    "stocks": [],
+    "totalAvailable": null,
+    "isBundle": null,
+    "bundleProducts": null,
+    "parentBundles": null,
+    "totalAvailableByStocks": []
+    }

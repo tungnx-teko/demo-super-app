@@ -1,0 +1,90 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TekPpmService
+import Foundation
+import Swift
+import TekCoreNetwork
+import TekCoreService
+@_exported import TekPpmService
+import TekServiceInterfaces
+import TerraInstancesManager
+public struct PpmConfig {
+  public var url: Swift.String
+  public var channel: Swift.String
+  public var terminalCode: Swift.String
+}
+public enum PPMError : Swift.String, Swift.Error {
+  case orderPromotionInvalidGrandTotal
+  case getPromotionInvalidGrandTotal
+  case orderPromotionOrderValueTooMuch
+  case orderPromotionOrderValueTooSmall
+  case getPromotionCouponOutOfStock
+  case getPromotionCouponHasBeenUsed
+  case getPromotionCouponBudgetInactive
+  case getPromotionOutOfBudget
+  case personalPromotionInvalid
+  case orderPromotionInvalidPrice
+  case flashSaleOutOfStock
+  case orderPromotionFlashSaleInactive
+  case orderPromotionPromotionInactive
+  case couponUsedOrOutOfBudget
+  case getPromotionCouponNotExist
+  case getPromotionCouponInactive
+  case getPromotionCouponInvalidOrHasBeenUsed
+  case budgetOutOfBudget
+  case budgetOutOfBudgeItem
+  case budgetOutOfBudgetMoney
+  case budgetInactive
+  case orderPromotionCouponUsed
+  case orderPromotionInvalidPromotionPaymentMethod
+  case orderPromotionInvalidPromotionSku
+  case orderPromotionOutOfBudgetItem
+  case orderPromotionOutOfBudgetMoney
+  case voucherRemainVoucherNotEnough
+  case couponNotActivated
+  case couponOutOfStock
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class PpmServiceInstanceGenerator : TerraInstancesManager.ServiceInstanceGeneratable {
+  public typealias InstanceType = TekPpmService.PpmService
+  public typealias ServiceFactory = TekPpmService.PpmServiceFactory
+  required public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TerraPpmSingleton : TerraInstancesManager.InstancesManageable {
+  public typealias Generator = TekPpmService.PpmServiceInstanceGenerator
+  public static var shared: TekPpmService.TerraPpmSingleton
+  public var instances: [Swift.String : TekPpmService.PpmService]
+  @objc deinit
+}
+public var TerraPpm: TekPpmService.TerraPpmSingleton
+public class PpmServiceFactory : TekCoreService.ServiceBuildable, TekCoreService.ServiceConverterSupportable, TekCoreService.ServiceCredentialAttachable, TekCoreService.ServiceErrorDelegateAttachable {
+  public typealias ServiceConverter = TekPpmService.PpmConfigConverter
+  public var serviceName: Swift.String
+  public var rawConfig: [Swift.String : Any]
+  public var credential: TekCoreService.ServicesCredential?
+  weak public var errorDelegate: TekCoreService.ServicesErrorDelegate?
+  required public init()
+  public func withErrorDelegate(_ delegate: TekCoreService.ServicesErrorDelegate)
+  public func withCredential(_ credential: TekCoreService.ServicesCredential)
+  public func createService() throws -> TekCoreService.CoreService
+  @objc deinit
+}
+public class PpmService : TekCoreService.BasicWorkerService, TekServiceInterfaces.IPpmService {
+  public var channel: Swift.String
+  public var terminalCode: Swift.String
+  public init(url: Foundation.URL, channel: Swift.String, terminalCode: Swift.String, credential: TekCoreService.ServicesCredential?, errorDelegate: TekCoreService.ServicesErrorDelegate?)
+  public func getOrderPromotions(completion: @escaping ([TekServiceInterfaces.IDefinition], Swift.Bool) -> ())
+  public func validateCoupon(_ coupon: Swift.String, skus: [Swift.String], completion: @escaping TekServiceInterfaces.ValidateCouponHandler)
+  @objc deinit
+  override public init(url: Foundation.URL, credential: TekCoreService.ServicesCredential? = super, errorDelegate: TekCoreService.ServicesErrorDelegate? = super)
+}
+@_inheritsConvenienceInitializers public class PpmConfigConverter : TekCoreService.BaseServiceConverter<TekPpmService.PpmConfig> {
+  override public func convertConfig(rawValue: [Swift.String : Any]) -> TekPpmService.PpmConfig
+  @objc deinit
+  required public init(input: [Swift.String : Any])
+}

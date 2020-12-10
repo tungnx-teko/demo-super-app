@@ -1,0 +1,11 @@
+framework module TekPpmService {
+  umbrella header "TekPpmService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekPpmService.Swift {
+    header "TekPpmService-Swift.h"
+    requires objc
+}

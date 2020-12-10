@@ -1,0 +1,11 @@
+framework module TekUserService {
+  umbrella header "TekUserService.h"
+
+  export *
+  module * { export * }
+}
+
+module TekUserService.Swift {
+    header "TekUserService-Swift.h"
+    requires objc
+}
