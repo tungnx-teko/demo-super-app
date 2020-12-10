@@ -135,6 +135,7 @@ PODS:
   - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
+  - Alamofire
   - Terra
   - TrackingBridge (~> 0.0.1)
   - TripiFlightConnector (= 1.0.4-dev)
@@ -233,6 +234,6 @@ SPEC CHECKSUMS:
   TripiFlightKit: 2b011615e80726412a15aeeeb9f19048bffefea4
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 82183aa27068d32cdba792e7d8e43042994fbcf4
+PODFILE CHECKSUM: 2765fcdca11cf534befd0b0901f0ddd663d398fd
 
 COCOAPODS: 1.10.0

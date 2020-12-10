@@ -25,8 +25,13 @@ target 'DemoSuperApp' do
   use_frameworks!
 
   # Pods for DemoSuperApp
+  pod 'Alamofire'
+  
+  # Pods for integrating mini app
   pod 'Terra'
-  pod 'TripiFlightConnector', '1.0.4-dev'
   pod 'TrackingBridge', '~> 0.0.1'
+  
+  # Mini apps
+  pod 'TripiFlightConnector', '1.0.4-dev'
   
 end
