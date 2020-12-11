@@ -494,7 +494,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.staging;
 				PRODUCT_NAME = "Demo Super App";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -520,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.staging;
 				PRODUCT_NAME = "Demo Super App";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

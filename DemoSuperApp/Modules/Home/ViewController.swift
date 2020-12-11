@@ -31,12 +31,22 @@ class ViewController: UIViewController {
     @IBAction func vnshopWasTapped(_ sender: Any) {
         openApp(appCode: "vnshop")
     }
+    
     @IBAction func icheckLoginWasTapped(_ sender: Any) {
         let sv = iCheck.TokenGenerateService(url: URL(string: "https://social.dev.icheck.vn")!)
         sv.requestToGenerateToken { [weak self] (token) in
             print("iCheck token: \(String(describing: token))")
             guard let token = token else { return }
             self?.login(withToken: token)
+        }
+    }
+    
+    @IBAction func vnshopLoginWasTapped(_ sender: Any) {
+        guard let loginManager = TerraLoginManager.getInstances(by: terraApp) else { return }
+        do {
+            try loginManager.login(GoogleLoginUI(presentViewController: self, delegate: self))
+        } catch {
+            print(error)
         }
     }
     

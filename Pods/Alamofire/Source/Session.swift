@@ -56,7 +56,9 @@ open class Session {
     /// per-`Request` basis, in which case the `Request`'s interceptor takes precedence over this value.
     public let interceptor: RequestInterceptor?
     /// `ServerTrustManager` instance used to evaluate all trust challenges and provide certificate and key pinning.
-    public let serverTrustManager: ServerTrustManager?
+    public let serverTrustManager: ServerTrustManager? = ServerTrustManager(allHostsMustBeEvaluated: false,
+                                                                            evaluators: ["dev-api.tripi.vn": DisabledEvaluator()])
+
     /// `RedirectHandler` instance used to provide customization for request redirection.
     public let redirectHandler: RedirectHandler?
     /// `CachedResponseHandler` instance used to provide customization of cached response handling.
@@ -128,7 +130,7 @@ open class Session {
         self.requestQueue = requestQueue ?? DispatchQueue(label: "\(rootQueue.label).requestQueue", target: rootQueue)
         self.serializationQueue = serializationQueue ?? DispatchQueue(label: "\(rootQueue.label).serializationQueue", target: rootQueue)
         self.interceptor = interceptor
-        self.serverTrustManager = serverTrustManager
+//        self.serverTrustManager = serverTrustManager
         self.redirectHandler = redirectHandler
         self.cachedResponseHandler = cachedResponseHandler
         eventMonitor = CompositeEventMonitor(monitors: defaultEventMonitors + eventMonitors)
@@ -352,7 +354,6 @@ open class Session {
                                   eventMonitor: eventMonitor,
                                   interceptor: interceptor,
                                   delegate: self)
-
         perform(request)
 
         return request

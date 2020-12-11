@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadTerra(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?, completion: @escaping (Bool) -> ()) {
-        TerraApp.configure(appName: "superappdemo:ios", bundleId: "vn.vnshop.ios.shopping.dev") { (isSuccess, terraApp) in
+        TerraApp.configure(appName: "superappdemo:ios", bundleId: "vn.vnshop.ios.shopping.staging") { (isSuccess, terraApp) in
             if isSuccess, let terraApp = terraApp {
                 UIApplication.terraApp = terraApp
                 TerraHestia.configureWith(app: terraApp)
@@ -57,4 +57,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

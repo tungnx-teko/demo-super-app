@@ -82,14 +82,37 @@
                                     <action selector="icheckLoginWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EN1-nE-uHY"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYP-Wa-dUG">
+                                <rect key="frame" x="16" y="734" width="382" height="48"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.28007274859999998" blue="0.28548475680000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eS8-Ag-Tg9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login with VNShop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="vnshopLoginWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJB-Kk-kVg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fzN-6b-jz9" firstAttribute="top" secondItem="xYP-Wa-dUG" secondAttribute="bottom" constant="16" id="1cV-St-im3"/>
                             <constraint firstItem="t5k-we-i3W" firstAttribute="centerX" secondItem="fM7-mm-QdV" secondAttribute="centerX" id="7SO-pw-g3m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzN-6b-jz9" secondAttribute="bottom" constant="16" id="KDv-kN-b1v"/>
                             <constraint firstItem="fM7-mm-QdV" firstAttribute="leading" secondItem="Gei-vU-0vh" secondAttribute="trailing" constant="24" id="Mk3-Xx-RTh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzN-6b-jz9" secondAttribute="trailing" constant="16" id="O3q-6c-Cmy"/>
                             <constraint firstItem="fM7-mm-QdV" firstAttribute="centerY" secondItem="Gei-vU-0vh" secondAttribute="centerY" id="OKB-bf-Ho5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xYP-Wa-dUG" secondAttribute="trailing" constant="16" id="TXF-pP-8GK"/>
+                            <constraint firstItem="xYP-Wa-dUG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xgw-tT-wni"/>
                             <constraint firstItem="t5k-we-i3W" firstAttribute="top" secondItem="fM7-mm-QdV" secondAttribute="bottom" constant="6" id="deE-fp-KsF"/>
                             <constraint firstItem="sLh-wh-hZm" firstAttribute="top" secondItem="Gei-vU-0vh" secondAttribute="bottom" constant="6" id="fsb-Yp-92x"/>
                             <constraint firstItem="kUE-1Z-ZVn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="j8B-vb-oOT"/>
