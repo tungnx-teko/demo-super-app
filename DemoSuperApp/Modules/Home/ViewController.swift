@@ -51,9 +51,10 @@ class ViewController: UIViewController {
     }
     
     func login(withToken token: String) {
-        guard let loginManager = TerraLoginManager.getInstances(by: terraApp) else { return }
+        let loginManager = TerraLoginManager.getInstances(by: terraApp)
+        let credential = CustomAuthenticatorCredential(idToken: token)
         do {
-            try loginManager.login(credential: CustomAuthenticatorCredential(idToken: token), delegate: nil)
+            try loginManager?.login(credential: credential, delegate: nil)
         } catch {
             self.showAlert(title: "Error", message: error.localizedDescription)
         }

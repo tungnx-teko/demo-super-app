@@ -18,10 +18,12 @@
 		1A423EBB257F723900768E16 /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBA257F723900768E16 /* UIViewController+alert.swift */; };
 		1A423EBE257F760500768E16 /* iCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EBD257F760500768E16 /* iCheck.swift */; };
 		1A423EE72581DA7200768E16 /* SuperAppTrackingBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A423EE62581DA7200768E16 /* SuperAppTrackingBridge.swift */; };
+		369E7600A0F0AFBB5ECF9E4C /* Pods_DemoSuperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69AEC03E5E92C0DA0354D36D /* Pods_DemoSuperApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12ED9F54000D71C4108618DC /* Pods-DemoSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1A34F2002588B7F4005357E3 /* TripiCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TripiCommon.framework; sourceTree = "<group>"; };
+		1A34F2042588B81B005357E3 /* TripiFlightKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TripiFlightKit.framework; sourceTree = "<group>"; };
 		1A423E92257F643C00768E16 /* Demo Super App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo Super App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A423E95257F643C00768E16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A423E99257F643C00768E16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,8 +47,10 @@
 		1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TekCoreUploader.framework; sourceTree = "<group>"; };
 		1A423EE025810FD000768E16 /* TekCrmService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TekCrmService.framework; sourceTree = "<group>"; };
 		1A423EE62581DA7200768E16 /* SuperAppTrackingBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperAppTrackingBridge.swift; sourceTree = "<group>"; };
-		7E8BD7DAD56A3098625166A5 /* Pods-DemoSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.release.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.release.xcconfig"; sourceTree = "<group>"; };
-		813236A01FDA6FAD5D60D7D0 /* Pods_DemoSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5544932589B261007AB82F /* VnshopSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VnshopSdk.framework; path = "../../external-modules/Vnshop/dev/VnshopSdk.framework"; sourceTree = "<group>"; };
+		419759AF0123AC1437E1AFF6 /* Pods-DemoSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.release.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.release.xcconfig"; sourceTree = "<group>"; };
+		69AEC03E5E92C0DA0354D36D /* Pods_DemoSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E545936B4E4F19A4F60A17D9 /* Pods-DemoSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoSuperApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369E7600A0F0AFBB5ECF9E4C /* Pods_DemoSuperApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +177,8 @@
 		4C2DED7659C111313C946482 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				12ED9F54000D71C4108618DC /* Pods-DemoSuperApp.debug.xcconfig */,
-				7E8BD7DAD56A3098625166A5 /* Pods-DemoSuperApp.release.xcconfig */,
+				E545936B4E4F19A4F60A17D9 /* Pods-DemoSuperApp.debug.xcconfig */,
+				419759AF0123AC1437E1AFF6 /* Pods-DemoSuperApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -181,6 +186,9 @@
 		9D261EDD860EE04290163A76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A5544932589B261007AB82F /* VnshopSdk.framework */,
+				1A34F2042588B81B005357E3 /* TripiFlightKit.framework */,
+				1A34F2002588B7F4005357E3 /* TripiCommon.framework */,
 				1A423EE025810FD000768E16 /* TekCrmService.framework */,
 				1A423EDA2580F05B00768E16 /* TekCoreUploader.framework */,
 				1A423EDD2580F06A00768E16 /* TekCoreUploader.framework */,
@@ -191,7 +199,7 @@
 				1A423EC92580E78800768E16 /* TripiFlightConnector.framework */,
 				1A423EC62580E6C300768E16 /* Hestia.framework */,
 				1A423EBF2580CD1E00768E16 /* Janus.framework */,
-				813236A01FDA6FAD5D60D7D0 /* Pods_DemoSuperApp.framework */,
+				69AEC03E5E92C0DA0354D36D /* Pods_DemoSuperApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,12 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A423EA6257F643E00768E16 /* Build configuration list for PBXNativeTarget "DemoSuperApp" */;
 			buildPhases = (
-				F721F829E7B2A544CD83D9A5 /* [CP] Check Pods Manifest.lock */,
+				1A1CFF62D41F79AEE2B16B17 /* [CP] Check Pods Manifest.lock */,
 				1A423E8E257F643C00768E16 /* Sources */,
 				1A423E8F257F643C00768E16 /* Frameworks */,
 				1A423E90257F643C00768E16 /* Resources */,
-				814FB206F75C41FB98C080A5 /* [CP] Embed Pods Frameworks */,
-				496257E083768386F6032C4B /* [CP] Copy Pods Resources */,
+				C7A9C7D9B27FB7A332FBA0A3 /* [CP] Embed Pods Frameworks */,
+				00E37CF5D8C3955CD778F423 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,7 +276,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		496257E083768386F6032C4B /* [CP] Copy Pods Resources */ = {
+		00E37CF5D8C3955CD778F423 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,24 +293,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		814FB206F75C41FB98C080A5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F721F829E7B2A544CD83D9A5 /* [CP] Check Pods Manifest.lock */ = {
+		1A1CFF62D41F79AEE2B16B17 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,6 +313,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7A9C7D9B27FB7A332FBA0A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoSuperApp/Pods-DemoSuperApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -478,7 +486,7 @@
 		};
 		1A423EA7257F643E00768E16 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12ED9F54000D71C4108618DC /* Pods-DemoSuperApp.debug.xcconfig */;
+			baseConfigurationReference = E545936B4E4F19A4F60A17D9 /* Pods-DemoSuperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -504,7 +512,7 @@
 		};
 		1A423EA8257F643E00768E16 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E8BD7DAD56A3098625166A5 /* Pods-DemoSuperApp.release.xcconfig */;
+			baseConfigurationReference = 419759AF0123AC1437E1AFF6 /* Pods-DemoSuperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
