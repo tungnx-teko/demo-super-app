@@ -502,7 +502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.demosuperapp;
 				PRODUCT_NAME = "Demo Super App";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -528,7 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vn.vnshop.ios.shopping.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.teko.demosuperapp;
 				PRODUCT_NAME = "Demo Super App";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

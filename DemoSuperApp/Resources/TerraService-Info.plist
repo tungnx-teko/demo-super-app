@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>TerraClientID</key>
-	<string>superappdemo:ios:appstore:2.1.0</string>
+	<string>cyhome:ios:appstore:0.0.2</string>
 	<key>TerraEnvironment</key>
 	<string>dev</string>
 </dict>
