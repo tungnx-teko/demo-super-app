@@ -24,7 +24,8 @@ $distribution_frameworks = [
   "TripiCommon",
   "TripiFlightKit",
   "RxSwift",
-  "RxCocoa"
+  "RxCocoa",
+  "ReachabilitySwift"
 ]
 
 post_install do |installer|
@@ -47,10 +48,15 @@ target 'DemoSuperApp' do
   
   # Pods for integrating mini app
   pod 'Terra'
+#  pod 'Hestia'
+#  pod 'HestiaIOS'
+#  pod 'Janus'
   pod 'TrackingBridge', '~> 0.0.1'
+#  pod 'Firebase/Performance'
+#  pod 'FirebaseCore'
   
   # Mini apps
-  pod 'TripiFlightConnector', '1.1.0-dev'
+#  pod 'TripiFlightConnector', '1.1.0-dev'
   pod 'VnshopSdk', '1.3.3-staging'
   
 end

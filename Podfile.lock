@@ -225,9 +225,7 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
   - BSImagePicker (3.3.1)
-  - CallAppSDK (0.0.1)
   - Codextended (0.3.0)
-  - Cosmos (23.0.0)
   - CryptoSwift (1.3.8)
   - DeviceKit (4.2.1)
   - DifferenceKit (1.1.5):
@@ -260,71 +258,71 @@ PODS:
     - FBSDKShareKit/Share (= 5.15.1)
   - FBSDKShareKit/Share (5.15.1):
     - FBSDKCoreKit (~> 5.0)
-  - Firebase/Analytics (6.34.0):
+  - Firebase/Analytics (7.3.0):
     - Firebase/Core
-  - Firebase/Auth (6.34.0):
+  - Firebase/Auth (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 6.9.2)
-  - Firebase/Core (6.34.0):
+    - FirebaseAuth (~> 7.3.0)
+  - Firebase/Core (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.9.0)
-  - Firebase/CoreOnly (6.34.0):
-    - FirebaseCore (= 6.10.4)
-  - Firebase/Crashlytics (6.34.0):
+    - FirebaseAnalytics (= 7.3.0)
+  - Firebase/CoreOnly (7.3.0):
+    - FirebaseCore (= 7.3.0)
+  - Firebase/Crashlytics (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 4.6.2)
-  - Firebase/Database (6.34.0):
+    - FirebaseCrashlytics (~> 7.3.0)
+  - Firebase/Database (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (~> 6.6.0)
-  - Firebase/DynamicLinks (6.34.0):
+    - FirebaseDatabase (~> 7.3.0)
+  - Firebase/DynamicLinks (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseDynamicLinks (~> 4.3.1)
-  - Firebase/Messaging (6.34.0):
+    - FirebaseDynamicLinks (~> 7.3.0)
+  - Firebase/Messaging (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 4.7.1)
-  - Firebase/Performance (6.34.0):
+    - FirebaseMessaging (~> 7.3.0)
+  - Firebase/Performance (7.3.0):
     - Firebase/CoreOnly
-    - FirebasePerformance (~> 3.3.1)
-  - Firebase/RemoteConfig (6.34.0):
+    - FirebasePerformance (~> 7.3.0)
+  - Firebase/RemoteConfig (7.3.0):
     - Firebase/CoreOnly
-    - FirebaseRemoteConfig (~> 4.9.1)
-  - FirebaseABTesting (4.2.0):
-    - FirebaseCore (~> 6.10)
-  - FirebaseAnalytics (6.9.0):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.7)
-    - GoogleAppMeasurement (= 6.9.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - FirebaseAuth (6.9.2):
-    - FirebaseCore (~> 6.10)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (6.10.4):
-    - FirebaseCoreDiagnostics (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-  - FirebaseCoreDiagnostics (1.7.0):
-    - GoogleDataTransport (~> 7.4)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Logger (~> 6.7)
-    - nanopb (~> 1.30906.0)
-  - FirebaseCrashlytics (4.6.2):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleDataTransport (~> 7.2)
-    - nanopb (~> 1.30906.0)
+    - FirebaseRemoteConfig (~> 7.3.0)
+  - FirebaseABTesting (7.3.0):
+    - FirebaseCore (~> 7.0)
+  - FirebaseAnalytics (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleAppMeasurement (= 7.3.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30906.0)
+  - FirebaseAuth (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GTMSessionFetcher/Core (~> 1.4)
+  - FirebaseCore (7.3.0):
+    - FirebaseCoreDiagnostics (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Logger (~> 7.0)
+  - FirebaseCoreDiagnostics (7.3.0):
+    - GoogleDataTransport (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Logger (~> 7.0)
+    - nanopb (~> 2.30906.0)
+  - FirebaseCrashlytics (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleDataTransport (~> 8.0)
+    - nanopb (~> 2.30906.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseDatabase (6.6.0):
-    - FirebaseCore (~> 6.10)
+  - FirebaseDatabase (7.3.0):
+    - FirebaseCore (~> 7.0)
     - leveldb-library (~> 1.22)
-  - FirebaseDynamicLinks (4.3.1):
-    - FirebaseCore (~> 6.10)
-  - FirebaseFirestore (1.19.0):
+  - FirebaseDynamicLinks (7.3.1):
+    - FirebaseCore (~> 7.0)
+  - FirebaseFirestore (7.3.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
     - abseil/memory (= 0.20200225.0)
@@ -332,63 +330,63 @@ PODS:
     - abseil/strings/strings (= 0.20200225.0)
     - abseil/time (= 0.20200225.0)
     - abseil/types (= 0.20200225.0)
-    - FirebaseCore (~> 6.10)
+    - FirebaseCore (~> 7.0)
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
-    - nanopb (~> 1.30906.0)
-  - FirebaseInstallations (1.7.0):
-    - FirebaseCore (~> 6.10)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
+    - nanopb (~> 2.30906.0)
+  - FirebaseInstallations (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseInstanceID (4.8.0):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
-  - FirebaseMessaging (4.7.1):
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstanceID (~> 4.7)
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/Environment (~> 6.7)
-    - GoogleUtilities/Reachability (~> 6.7)
-    - GoogleUtilities/UserDefaults (~> 6.7)
-    - Protobuf (>= 3.9.2, ~> 3.9)
-  - FirebasePerformance (3.3.2):
-    - FirebaseCore (~> 6.9)
-    - FirebaseInstallations (~> 1.5)
-    - FirebaseRemoteConfig (~> 4.7)
-    - GoogleDataTransport (~> 7.0)
+  - FirebaseInstanceID (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebasePerformance (7.3.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - FirebaseRemoteConfig (~> 7.0)
+    - GoogleDataTransport (~> 8.1)
     - GoogleToolboxForMac/Logger (~> 2.1)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-    - GoogleUtilities/Environment (~> 6.2)
-    - GoogleUtilities/ISASwizzler (~> 6.2)
-    - GoogleUtilities/MethodSwizzler (~> 6.2)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/ISASwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.12)
-  - FirebasePlugin (0.1.2):
-    - Firebase/Analytics (~> 6.24)
-    - Firebase/Auth (~> 6.24)
-    - Firebase/Crashlytics (~> 6.24)
-    - Firebase/Database (~> 6.24)
-    - Firebase/DynamicLinks (~> 6.24)
-    - Firebase/Messaging (~> 6.24)
-    - Firebase/RemoteConfig (~> 6.24)
-  - FirebaseRemoteConfig (4.9.1):
-    - FirebaseABTesting (~> 4.2)
-    - FirebaseCore (~> 6.10)
-    - FirebaseInstallations (~> 1.6)
-    - GoogleUtilities/Environment (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
+  - FirebasePlugin (0.3.1):
+    - Firebase/Analytics
+    - Firebase/Auth (~> 7)
+    - Firebase/Crashlytics
+    - Firebase/Database
+    - Firebase/DynamicLinks
+    - Firebase/Messaging
+    - Firebase/Performance
+    - Firebase/RemoteConfig
+  - FirebaseRemoteConfig (7.3.0):
+    - FirebaseABTesting (~> 7.0)
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
   - FittedSheets (1.4.6)
-  - GoogleAppMeasurement (6.9.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
-    - GoogleUtilities/MethodSwizzler (~> 6.7)
-    - GoogleUtilities/Network (~> 6.7)
-    - "GoogleUtilities/NSData+zlib (~> 6.7)"
-    - nanopb (~> 1.30906.0)
-  - GoogleDataTransport (7.5.1):
-    - nanopb (~> 1.30906.0)
+  - GoogleAppMeasurement (7.3.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30906.0)
+  - GoogleDataTransport (8.1.0):
+    - nanopb (~> 2.30906.0)
   - GoogleMaps (3.4.0):
     - GoogleMaps/Maps (= 3.4.0)
   - GoogleMaps/Base (3.4.0)
@@ -405,25 +403,25 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.3.0)
   - "GoogleToolboxForMac/NSData+zlib (2.3.0)":
     - GoogleToolboxForMac/Defines (= 2.3.0)
-  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+  - GoogleUtilities/AppDelegateSwizzler (7.1.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.7.2):
+  - GoogleUtilities/Environment (7.1.1):
     - PromisesObjC (~> 1.2)
-  - GoogleUtilities/ISASwizzler (6.7.2)
-  - GoogleUtilities/Logger (6.7.2):
+  - GoogleUtilities/ISASwizzler (7.1.1)
+  - GoogleUtilities/Logger (7.1.1):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.7.2):
+  - GoogleUtilities/MethodSwizzler (7.1.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.7.2):
+  - GoogleUtilities/Network (7.1.1):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.7.2)"
-  - GoogleUtilities/Reachability (6.7.2):
+  - "GoogleUtilities/NSData+zlib (7.1.1)"
+  - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (6.7.2):
+  - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
   - "gRPC-C++ (1.28.2)":
     - "gRPC-C++/Implementation (= 1.28.2)"
@@ -466,7 +464,6 @@ PODS:
   - HestiaIOS (2.2.1):
     - Hestia (~> 2.2.0)
     - Janus (~> 2.3.1)
-  - IQKeyboardManagerSwift (6.5.0)
   - Janus (2.3.4):
     - FacebookCore (~> 0.9.0)
     - FacebookLogin (~> 0.9.0)
@@ -475,33 +472,22 @@ PODS:
     - SwiftyJSON (~> 4.0)
     - TekCoreService (~> 1.2.9)
     - TerraInstancesManager (~> 1.1.0)
-  - JVFloatLabeledTextField (1.2.2)
   - JWTDecode (2.5.0)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - leveldb-library (1.22)
-  - MarqueeLabel (3.2.1):
-    - MarqueeLabel/ObjC (= 3.2.1)
-  - MarqueeLabel/ObjC (3.2.1)
-  - Minerva (2.4.1):
-    - FirebaseFirestore (~> 1.19.0)
+  - Minerva (2.5.0):
+    - FirebaseFirestore (~> 7)
     - SnapKit
     - SVProgressHUD
     - TekCoreService (~> 1.2.2)
     - TerraInstancesManager (~> 1.1.0)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya/Core (14.0.0):
-    - Alamofire (~> 5.0)
-  - Moya/RxSwift (14.0.0):
-    - Moya/Core
-    - RxSwift (~> 5.0)
-  - nanopb (1.30906.0):
-    - nanopb/decode (= 1.30906.0)
-    - nanopb/encode (= 1.30906.0)
-  - nanopb/decode (1.30906.0)
-  - nanopb/encode (1.30906.0)
+  - nanopb (2.30906.0):
+    - nanopb/decode (= 2.30906.0)
+    - nanopb/encode (= 2.30906.0)
+  - nanopb/decode (2.30906.0)
+  - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
   - Protobuf (3.14.0)
   - ReachabilitySwift (5.0.0)
@@ -510,25 +496,18 @@ PODS:
   - Realm/Headers (3.18.0)
   - RealmSwift (3.18.0):
     - Realm (= 3.18.0)
-  - Result (5.0.0)
-  - RxBlocking (14.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxMoya (14.0.0)
   - RxRealm (1.0.0):
     - RealmSwift (~> 3.14)
     - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - SDWebImage (5.10.0):
-    - SDWebImage/Core (= 5.10.0)
-  - SDWebImage/Core (5.10.0)
   - SkeletonView (1.8.8)
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
-  - SwiftyBeaver (1.9.3)
   - SwiftyJSON (4.3.0)
   - TekCoreNetwork (1.2.21):
     - Alamofire (~> 5.3.0)
@@ -540,13 +519,13 @@ PODS:
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.38)
     - TerraInstancesManager (~> 1.1.0)
-  - TekDiscoveryService (2.2.0):
+  - TekDiscoveryService (2.2.1):
     - TekCoreService (~> 1.2.2)
-    - TekServiceInterfaces (~> 0.2.38)
+    - TekServiceInterfaces (~> 0.2.44)
     - TerraInstancesManager (~> 1.1.0)
-  - TekIdentityService (2.2.0):
+  - TekIdentityService (2.2.1):
     - TekCoreService (~> 1.2.2)
-    - TekServiceInterfaces (~> 0.2.38)
+    - TekServiceInterfaces (~> 0.2.45)
     - TerraInstancesManager (~> 1.1.0)
   - TekListingService (2.2.0):
     - TekCoreService (~> 1.2.2)
@@ -556,21 +535,17 @@ PODS:
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.38)
     - TerraInstancesManager (~> 1.1.0)
-  - TekoMediaPreview (0.0.1):
+  - TekoMediaPreview (0.0.2):
     - Kingfisher
   - TekOrderService (2.2.1):
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.43)
     - TerraInstancesManager (~> 1.1.0)
-  - TekoTracker (0.4.0):
-    - TekoTracker/Core (= 0.4.0)
-  - TekoTracker/Core (0.4.0):
-    - Alamofire
+  - TekoTracker (0.4.1):
+    - Alamofire (~> 5.3.0)
     - DeviceKit
     - ReachabilitySwift
     - RxSwift
-  - TekoTracker/Ecommerce (0.4.0):
-    - TekoTracker/Core
   - TekPolicyService (2.2.0):
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.38)
@@ -583,7 +558,7 @@ PODS:
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.38)
     - TerraInstancesManager (~> 1.1.0)
-  - TekServiceInterfaces (0.2.44)
+  - TekServiceInterfaces (0.2.45)
   - TekStnService (2.2.0):
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.38)
@@ -596,60 +571,29 @@ PODS:
     - TekCoreService (~> 1.2.2)
     - TekServiceInterfaces (~> 0.2.40)
     - TerraInstancesManager (~> 1.1.0)
-  - Terra (2.3.0):
+  - Terra (2.3.1):
     - Codextended
     - CryptoSwift (~> 1.3.2)
     - TekCoreService (~> 1.2.2)
-    - TekServiceInterfaces (~> 0.2.40)
+    - TekServiceInterfaces (~> 0.2.45)
     - TerraInstancesManager (~> 1.1.0)
   - TerraInstancesManager (1.1.0):
     - TekCoreService (~> 1.2.2)
   - Toast-Swift (5.0.1)
   - TrackingBridge (0.0.1)
-  - TripiCommon (2.0.1):
-    - Alamofire (~> 5.3.0)
-    - Moya
-    - Result
-    - RxBlocking
-    - RxCocoa
-    - RxMoya
-    - RxSwift
-    - SwiftyBeaver
-  - TripiFlightConnector (1.1.0-dev):
-    - HestiaIOS
-    - TripiFlightKit (~> 2.0.1-dev)
-  - TripiFlightKit (2.0.1-dev):
-    - Alamofire (~> 5.3)
-    - CallAppSDK (= 0.0.1)
-    - Cosmos
-    - IQKeyboardManagerSwift (= 6.5.0)
-    - JVFloatLabeledTextField
-    - MarqueeLabel (~> 3.2.0)
-    - Moya
-    - Moya/RxSwift
-    - RxCocoa
-    - RxSwift
-    - SDWebImage
-    - SkeletonView
-    - SVProgressHUD
-    - SwiftyBeaver
-    - Toast-Swift
-    - TripiCommon (= 2.0.1)
-    - UPCarouselFlowLayout
   - TTTAttributedLabel (2.0.0)
   - UIColor_Hex_Swift (4.0.2)
-  - UPCarouselFlowLayout (1.1.2)
   - VnshopSdk (1.3.3-staging):
     - BSImagePicker (~> 3.3.1)
     - DifferenceKit
-    - Firebase/Performance
-    - FirebasePlugin (~> 0.1.2)
+    - FirebasePlugin (~> 0.3.1)
     - FittedSheets (~> 1.4.5)
     - GoogleMaps (~> 3.4.0)
     - GooglePlaces (~> 3.4.0)
+    - HestiaIOS
     - Janus (~> 2.3.4)
     - JWTDecode (~> 2.4)
-    - Minerva (~> 2.4.1)
+    - Minerva (~> 2.5.0)
     - RealmSwift (~> 3.18.0)
     - RxCocoa (~> 5.1.0)
     - RxRealm (~> 1.0.0)
@@ -658,14 +602,13 @@ PODS:
     - SkeletonView (~> 1.8.7)
     - TekCoreUploader (~> 1.0.1)
     - TekCrmService (~> 2.2.0)
-    - TekDiscoveryService (= 2.2.0)
+    - TekDiscoveryService (~> 2.2.0)
     - TekIdentityService (~> 2.2.0)
     - TekListingService (~> 2.2.0)
     - TekLocationService (~> 2.2.0)
-    - TekoMediaPreview
+    - TekoMediaPreview (~> 0.0.2)
     - TekOrderService (~> 2.2.0)
-    - TekoTracker
-    - TekoTracker/Ecommerce
+    - TekoTracker (~> 0.4.1)
     - TekPolicyService (~> 2.2.0)
     - TekPpmService (~> 2.2.0)
     - TekSearchService (~> 2.2.0)
@@ -683,7 +626,6 @@ DEPENDENCIES:
   - Alamofire
   - Terra
   - TrackingBridge (~> 0.0.1)
-  - TripiFlightConnector (= 1.1.0-dev)
   - VnshopSdk (= 1.3.3-staging)
 
 SPEC REPOS:
@@ -694,7 +636,6 @@ SPEC REPOS:
     - BoringSSL-GRPC
     - BSImagePicker
     - Codextended
-    - Cosmos
     - CryptoSwift
     - DeviceKit
     - DifferenceKit
@@ -731,44 +672,33 @@ SPEC REPOS:
     - gRPC-Core
     - GTMAppAuth
     - GTMSessionFetcher
-    - IQKeyboardManagerSwift
-    - JVFloatLabeledTextField
     - JWTDecode
     - Kingfisher
     - leveldb-library
-    - MarqueeLabel
-    - Moya
     - nanopb
     - PromisesObjC
     - Protobuf
     - ReachabilitySwift
     - Realm
     - RealmSwift
-    - Result
     - RxCocoa
     - RxRealm
     - RxRelay
     - RxSwift
-    - SDWebImage
     - SkeletonView
     - SnapKit
     - SVProgressHUD
-    - SwiftyBeaver
     - SwiftyJSON
     - Toast-Swift
     - TTTAttributedLabel
     - UIColor_Hex_Swift
-    - UPCarouselFlowLayout
     - VPAttributedFormat
   https://github.com/teko-vn/Specs-ios.git:
-    - CallAppSDK
     - FirebasePlugin
     - Hestia
     - HestiaIOS
     - Janus
     - Minerva
-    - RxBlocking
-    - RxMoya
     - TekCoreNetwork
     - TekCoreService
     - TekCoreUploader
@@ -790,9 +720,6 @@ SPEC REPOS:
     - Terra
     - TerraInstancesManager
     - TrackingBridge
-    - TripiCommon
-    - TripiFlightConnector
-    - TripiFlightKit
     - VnshopSdk
 
 SPEC CHECKSUMS:
@@ -801,9 +728,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
-  CallAppSDK: fe7f7fa21267ac39a221e408c9176ceb4bfce6cd
   Codextended: f384271b8694376ad766ddbf2a011efbfdcee905
-  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   CryptoSwift: 01b0f0cba1d5c212e5a335ff6c054fb75a204f00
   DeviceKit: cadb5ff25d45fe186778bf2d0fd2ea4750542189
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
@@ -813,95 +738,82 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
   FBSDKShareKit: 259737eab3cc807087374553abdf588b3096ba55
-  Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
-  FirebaseABTesting: 8a9d8df3acc2b43f4a22014ddf9f601bca6af699
-  FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
-  FirebaseAuth: c92d49ada7948d1a23466e3db17bc4c2039dddc3
-  FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
-  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
-  FirebaseCrashlytics: 1a747c9cc084a24dc6d9511c991db1cd078154eb
-  FirebaseDatabase: 13a865a4b85897462b930eb683bda8f52583713f
-  FirebaseDynamicLinks: 6eac37d86910382eafb6315d952cc44c9e176094
-  FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
-  FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
-  FirebaseInstanceID: bd3ffc24367f901a43c063b36c640b345a4a5dd1
-  FirebaseMessaging: 5eca4ef173de76253352511aafef774caa1cba2a
-  FirebasePerformance: 34de2b03ddfddbca26a716468a50877fd065fbe5
-  FirebasePlugin: e1ebbe0e24b49648617d4230662ed132d6336fc8
-  FirebaseRemoteConfig: 35a729305f254fb15a2e541d4b36f3a379da7fdc
+  Firebase: 26223c695fe322633274198cb19dca8cb7e54416
+  FirebaseABTesting: 303b5366c0c75be479424e8935e2f475cf24ce21
+  FirebaseAnalytics: 2580c2d62535ae7b644143d48941fcc239ea897a
+  FirebaseAuth: c224a0cf1afa0949bd5c7bfcf154b4f5ce8ddef2
+  FirebaseCore: 4d3c72622ce0e2106aaa07bb4b2935ba2c370972
+  FirebaseCoreDiagnostics: d50e11039e5984d92c8a512be2395f13df747350
+  FirebaseCrashlytics: d31325312c92e2cb2f0386d589b9aa44e303d99b
+  FirebaseDatabase: 22199cb121a527ae59df646d61426fbb12f5627a
+  FirebaseDynamicLinks: a6df95d6dbc746c2bbf7d511343cda1344e2cf70
+  FirebaseFirestore: 1906bf163afdb7c432d2e3b5c40ceb9dd2df5820
+  FirebaseInstallations: 971df89b48ae5ee4cc2bf6935f3857a525d28550
+  FirebaseInstanceID: 5ccdee6a84e6b4bb5316de0a8cd88bc749ba490d
+  FirebaseMessaging: 68d1bcb14880189558a8ae57167abe0b7e417232
+  FirebasePerformance: 7915b7dfc8258030d5fac9544d7fa6b55fbe3e57
+  FirebasePlugin: 4a88a169204e287ef94a690fc101578d36591349
+  FirebaseRemoteConfig: 826fad8bec5ce1912ef97a124d6ec0ce4dcf6ec1
   FittedSheets: 7f37fee2567d15dcde391f31eccbffb660ddebf0
-  GoogleAppMeasurement: a6a3a066369828db64eda428cb2856dc1cdc7c4e
-  GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
+  GoogleAppMeasurement: 8d3c0aeede16ab7764144b5a4ca8e1d4323841b7
+  GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab
   GoogleMaps: 67f4a604f80dd6a22d09c2a507a3a395b9f23060
   GooglePlaces: 7547289e3fffc8980f4a027be99888e29d59b15d
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleToolboxForMac: 1350d40e86a76f7863928d63bcb0b89c84c521c5
-  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Hestia: 2f05adc0141e1567fea555ce9ee26a2b9735bf83
   HestiaIOS: c937b93debf7885f229098d655d8407d15ac378e
-  IQKeyboardManagerSwift: 6cd19976c6e871907c4ed9127c2d3affdd4defc2
   Janus: 4f8fb41261469b0cf5e899313476beebc9d1e4df
-  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   JWTDecode: d4c176a28a29f7e6f9abf5c90ad3002f69b98c7c
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  MarqueeLabel: 2daf039bf916937c8a4c9adfc13577cc5e51b4ce
-  Minerva: 0e6d3b43390bf56b93a4a90d3c2b1409b607fe8b
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  Minerva: c7550a172384018d9bb77b71e9d5d8214eb0166d
+  nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: 7b3d04740facf45e958a514b466a32b04f1113d6
   RealmSwift: c817b5f374668cf08f649afb05f55d92a787649c
-  Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
-  RxBlocking: 53102732cc327db540cb07b4954d493d71e55307
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxMoya: 40b7d2ade13d3109602fb9a7671469387f43b95b
   RxRealm: 1e81dcfca1fb50c3e9b3e1f8102bc875c5156a2e
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   SkeletonView: e37c282c1b228547b83daf47605f79c3aeb1df9a
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftyBeaver: 2e8acd6fc90c6d0a27055867a290794926d57c02
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TekCoreNetwork: ba85557849a4cf9be73eb329d77396838099daa7
   TekCoreService: 3071725d6667203c21a949f32125daef3575bafa
   TekCoreUploader: e3dd7807429af0dcf476750718ccc5481ed1f929
   TekCrmService: 8e6637fbd10021e91691d29236b9d4e5c4df1d69
-  TekDiscoveryService: 7db80b617d815f4a0559f2ceae89a50472730825
-  TekIdentityService: de154ac8e534af0a380a0dec174b8657de994aa0
+  TekDiscoveryService: b963283825aaf9d5e0b5c10f4a5f790b1215eb22
+  TekIdentityService: 950a881051649cebe456fef148d257ea43f7d2fb
   TekListingService: e775b74a857326b7fcbc13b2c4096dc37cd94a49
   TekLocationService: 5dce25668614b067c5365e1bc966197e6bc76121
-  TekoMediaPreview: 1f7c08f781e95bc27a39fa5b1665d55d970cb26a
+  TekoMediaPreview: 339a9906d195478fa25a0601173571bd4b28e16b
   TekOrderService: ebce16feb22167a7aef26f10523efa2843ff3965
-  TekoTracker: 995ce8ee59d5fd54e3323477a9269c8a02779a63
+  TekoTracker: c23a22a3af97defda9d2820b4f659b82d4f87358
   TekPolicyService: 3ee55cadc0945554347fa16473c7752551a9fc44
   TekPpmService: 7eac35e0cc0f552cf3a10d32ebe96070957a9167
   TekSearchService: 2b37c5b834fd0b2881b53e61caad7f7a8c2a0c24
-  TekServiceInterfaces: 0d858737edf0616c938b3f937f43374b998abc85
+  TekServiceInterfaces: b685e15d2d8b11cdac1cf3b87fff5255e2b83305
   TekStnService: aab24485d3d580e77bef39274f8f3dff768e8d84
   TekTicketService: df34de8022229494afc167b0dde774900341098f
   TekUserService: daf46332b633ed0d390066d0336b2544c3818e3e
-  Terra: 8967dcfde3c36c1ada15aa051e7fdfddbbcb5196
+  Terra: 40593b64ab347d0cbec8dfe3575336fc51a9a8ba
   TerraInstancesManager: 324d494a4ca2c68311b45105d0db64d0ff85ae8d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TrackingBridge: 5944340ff465973e8955c1c5a013d1721226694b
-  TripiCommon: 9763a481cbf22150f399ac808785ce3a8aa1742f
-  TripiFlightConnector: d74c3a8e9762d39b8d6e90d25ab6007d924a01e6
-  TripiFlightKit: 87f4e3f7b7232fe4718ecc2d8359e924f76de1cf
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UIColor_Hex_Swift: 2fb123c7d864994a5137ef57c4dc55e17a657d29
-  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
-  VnshopSdk: c664d6c0f7ba9f81a8dd17b0b6b24949cab217b1
+  VnshopSdk: de0a2f43d85d0bf6a8874b9069a5ed84c46427fb
   VPAttributedFormat: 8112a4e26b3ee55664bfd8f5ffc5524daabc28b0
 
-PODFILE CHECKSUM: a5ffa72e46633c5b41e6d354a834c53cd58edee8
+PODFILE CHECKSUM: 68e17db537b2ed5672b28fc3064a1e8612af7d18
 
 COCOAPODS: 1.10.0

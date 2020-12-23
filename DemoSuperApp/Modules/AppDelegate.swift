@@ -12,6 +12,7 @@ import Terra
 import Hestia
 import Janus
 import TrackingBridge
+import FirebaseCore
 
 extension UIApplication {
     static var terraApp: ITerraApp!
@@ -27,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.buildRootViewController()
         
@@ -45,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func loadTerra(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?, completion: @escaping (Bool) -> ()) {
-        TerraApp.configure(appName: "cyhome:ios", bundleId: "vn.teko.demosuperapp") { (isSuccess, terraApp) in
+        TerraApp.configure(appName: "cyhome:ios", bundleId: "vn.teko.superapp.demo") { (isSuccess, terraApp) in
             if isSuccess, let terraApp = terraApp {
                 UIApplication.terraApp = terraApp
                 TerraHestia.configureWith(app: terraApp)
