@@ -47,13 +47,9 @@ target 'DemoSuperApp' do
   pod 'Alamofire'
   
   # Pods for integrating mini app
+  pod 'Firebase/Auth', '~> 7'
   pod 'Terra'
-#  pod 'Hestia'
-#  pod 'HestiaIOS'
-#  pod 'Janus'
   pod 'TrackingBridge', '~> 0.0.1'
-#  pod 'Firebase/Performance'
-#  pod 'FirebaseCore'
   
   # Mini apps
 #  pod 'TripiFlightConnector', '1.1.0-dev'
