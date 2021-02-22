@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,20 +100,54 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9px-py-e8n">
+                                <rect key="frame" x="184" y="108.5" width="64" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.50138330569613243" blue="0.30030635472875544" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Ztq-9N-zQE"/>
+                                    <constraint firstAttribute="height" constant="64" id="yxM-Co-mkX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Mini">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="miniAppWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PP7-ti-je2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcc-BT-dfX">
+                                <rect key="frame" x="264" y="108.5" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.25647481458686849" green="0.67825101876722083" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="RfH-F3-HaN"/>
+                                    <constraint firstAttribute="width" constant="64" id="Tyu-0L-sNg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SDK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sdkWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oz0-fT-s6Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fzN-6b-jz9" firstAttribute="top" secondItem="xYP-Wa-dUG" secondAttribute="bottom" constant="16" id="1cV-St-im3"/>
                             <constraint firstItem="t5k-we-i3W" firstAttribute="centerX" secondItem="fM7-mm-QdV" secondAttribute="centerX" id="7SO-pw-g3m"/>
+                            <constraint firstItem="9px-py-e8n" firstAttribute="leading" secondItem="fM7-mm-QdV" secondAttribute="trailing" constant="16" id="Aho-pd-s3V"/>
+                            <constraint firstItem="zcc-BT-dfX" firstAttribute="centerY" secondItem="9px-py-e8n" secondAttribute="centerY" id="Ayc-kF-31W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fzN-6b-jz9" secondAttribute="bottom" constant="16" id="KDv-kN-b1v"/>
                             <constraint firstItem="fM7-mm-QdV" firstAttribute="leading" secondItem="Gei-vU-0vh" secondAttribute="trailing" constant="24" id="Mk3-Xx-RTh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzN-6b-jz9" secondAttribute="trailing" constant="16" id="O3q-6c-Cmy"/>
                             <constraint firstItem="fM7-mm-QdV" firstAttribute="centerY" secondItem="Gei-vU-0vh" secondAttribute="centerY" id="OKB-bf-Ho5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xYP-Wa-dUG" secondAttribute="trailing" constant="16" id="TXF-pP-8GK"/>
                             <constraint firstItem="xYP-Wa-dUG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xgw-tT-wni"/>
+                            <constraint firstItem="zcc-BT-dfX" firstAttribute="leading" secondItem="9px-py-e8n" secondAttribute="trailing" constant="16" id="c1r-Ek-nZB"/>
                             <constraint firstItem="t5k-we-i3W" firstAttribute="top" secondItem="fM7-mm-QdV" secondAttribute="bottom" constant="6" id="deE-fp-KsF"/>
                             <constraint firstItem="sLh-wh-hZm" firstAttribute="top" secondItem="Gei-vU-0vh" secondAttribute="bottom" constant="6" id="fsb-Yp-92x"/>
+                            <constraint firstItem="9px-py-e8n" firstAttribute="centerY" secondItem="fM7-mm-QdV" secondAttribute="centerY" id="ibW-kL-KfI"/>
                             <constraint firstItem="kUE-1Z-ZVn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="j8B-vb-oOT"/>
                             <constraint firstItem="kUE-1Z-ZVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nl6-ME-2mG"/>
                             <constraint firstItem="fzN-6b-jz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vI9-eP-tPQ"/>
@@ -122,6 +156,10 @@
                             <constraint firstItem="Gei-vU-0vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zRH-ju-gzq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="fzN-6b-jz9" id="oyZ-8F-i1B"/>
+                        <outlet property="sdkButton" destination="zcc-BT-dfX" id="ZYd-ys-jWD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,19 @@ import UIKit
 
 extension UIViewController {
     
+    static func instantiateFromNib() -> Self {
+        func instantiateFromNib<T: UIViewController>(_ viewType: T.Type) -> T {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                let nibName = String.init(format: "%@_iPad", String(describing: T.self))
+                if Bundle(for: T.self).path(forResource: nibName, ofType: "nib") != nil {
+                    return T.init(nibName: nibName, bundle: Bundle(for: T.self))
+                }
+            }
+            return T.init(nibName: String(describing: T.self), bundle: Bundle(for: T.self))
+        }
+        return instantiateFromNib(self)
+    }
+    
     @discardableResult
     func showAlert(
         title: String?,

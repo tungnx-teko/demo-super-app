@@ -1,0 +1,572 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TekoTracker
+import Alamofire
+import CoreData
+import CoreGraphics
+import CoreTelephony
+import DeviceKit
+import Foundation
+import Reachability
+import RxSwift
+import Swift
+@_exported import TekoTracker
+import UIKit
+extension UIViewController {
+  public var visibleContentEventDataInView: [TekoTracker.VisibleContentEventData] {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers final public class ProductViewEventData : TekoTracker.ScreenViewEventData {
+  @objc final public var sku: Swift.String
+  @objc final public var productName: Swift.String
+  @objc final public var channel: Swift.String
+  @objc final public var terminal: Swift.String
+  @objc public init(screenName: Swift.String, sku: Swift.String, productName: Swift.String, channel: Swift.String, terminal: Swift.String, contentType: Swift.String, title: Swift.String? = nil, href: Swift.String? = nil, extra: TekoTracker.FlattenExtraAttribute? = nil, navigationStart: Foundation.TimeInterval = 0, loadEventEnd: Foundation.TimeInterval = 0)
+  override final public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+  @objc override public init(screenName: Swift.String, contentType: Swift.String, title: Swift.String? = super, href: Swift.String? = super, extra: TekoTracker.FlattenExtraAttribute? = super, navigationStart: Foundation.TimeInterval = super, loadEventEnd: Foundation.TimeInterval = super)
+}
+extension EventName {
+  public static let userAlert: TekoTracker.EventName
+  public static let click: TekoTracker.EventName
+  public static let visibleContent: TekoTracker.EventName
+  public static let enterScreenView: TekoTracker.EventName
+  public static let exitScreenView: TekoTracker.EventName
+  public static let error: TekoTracker.EventName
+  public static let performanceTiming: TekoTracker.EventName
+}
+extension EventType : Swift.Equatable {
+  public static func == (lhs: TekoTracker.EventType, rhs: TekoTracker.EventType) -> Swift.Bool
+  public static let alert: TekoTracker.EventType
+  public static let custom: TekoTracker.EventType
+  public static let error: TekoTracker.EventType
+  public static let interaction: TekoTracker.EventType
+  public static let performanceTiming: TekoTracker.EventType
+  public static let screenView: TekoTracker.EventType
+  public static let timing: TekoTracker.EventType
+  public static let visibleContent: TekoTracker.EventType
+}
+extension UIView {
+  public var trackableViews: [UIKit.UIView] {
+    get
+  }
+  public var visibleContentEventData: TekoTracker.VisibleContentEventData {
+    get
+  }
+}
+@objc final public class TimingEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var channel: Swift.String?
+  @objc final public var category: Swift.String?
+  @objc final public var variable: Swift.String?
+  @objc final public var label: Swift.String?
+  @objc final public var duration: Foundation.TimeInterval
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  @objc public init(channel: Swift.String?, category: Swift.String?, variable: Swift.String?, label: Swift.String?, duration: Foundation.TimeInterval, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  @objc public init(duration: Foundation.TimeInterval)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc final public class CheckoutEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc(EcommerceProduct) public class Product : ObjectiveC.NSObject, Swift.Encodable {
+    @objc public var sku: Swift.String
+    @objc public var name: Swift.String
+    @objc public var price: Swift.Double
+    public var promotionPrice: Swift.Double?
+    @available(*, unavailable, message: "Unavailable in Swift")
+    @objc(promotionPrice) public var objPromotionPrice: Foundation.NSNumber? {
+      @objc get
+      @objc set
+    }
+    @objc public var quantity: Swift.Int
+    public init(sku: Swift.String, name: Swift.String, price: Swift.Double, promotionPrice: Swift.Double? = nil, quantity: Swift.Int)
+    @available(*, unavailable, message: "Unavailable in Swift")
+    @objc public init(sku: Swift.String, name: Swift.String, price: Swift.Double, promotionPrice: Foundation.NSNumber?, quantity: Swift.Int)
+    public func encode(to encoder: Swift.Encoder) throws
+    @objc deinit
+    @objc override dynamic public init()
+  }
+  @objc final public var orderID: Swift.String
+  @objc final public var grandTotal: Swift.Double
+  @objc final public var amountBeforeDiscount: Swift.Double
+  @objc final public var tax: Swift.Double
+  @objc final public var discountAmount: Swift.Double
+  @objc final public var products: [TekoTracker.CheckoutEventData.Product]
+  @objc final public var note: Swift.String
+  @objc final public var shippingFee: Swift.Double
+  @objc final public var shippingPartner: Swift.String?
+  @objc final public var shippingAddressCode: Swift.String?
+  @objc final public var shippingProvince: Swift.String?
+  @objc final public var shippingDistrict: Swift.String?
+  @objc final public var shippingWard: Swift.String?
+  @objc final public var shippingStreet: Swift.String?
+  @objc final public var shippingAddress: Swift.String?
+  final public var paymentMethod: TekoTracker.PaymentMethod {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(paymentMethod) final public var objcPaymentMethod: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var paymentBank: Swift.String?
+  final public var status: TekoTracker.EcommerceEventStatus {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(status) final public var objcStatus: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  public init(orderID: Swift.String, grandTotal: Swift.Double, amountBeforeDiscount: Swift.Double, tax: Swift.Double, discountAmount: Swift.Double, products: [TekoTracker.CheckoutEventData.Product] = [], paymentMethod: TekoTracker.PaymentMethod, paymentBank: Swift.String? = nil, shippingFee: Swift.Double = 0, shippingPartner: Swift.String? = nil, shippingAddressCode: Swift.String? = nil, shippingProvince: Swift.String? = nil, shippingDistrict: Swift.String? = nil, shippingWard: Swift.String? = nil, shippingStreet: Swift.String? = nil, shippingAddress: Swift.String? = nil, note: Swift.String = "", status: TekoTracker.EcommerceEventStatus, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(orderID: Swift.String, grandTotal: Swift.Double, amountBeforeDiscount: Swift.Double, tax: Swift.Double, discountAmount: Swift.Double, products: [TekoTracker.CheckoutEventData.Product], paymentMethod: Swift.String, paymentBank: Swift.String?, shippingFee: Swift.Double, shippingPartner: Swift.String?, shippingAddressCode: Swift.String?, shippingProvince: Swift.String?, shippingDistrict: Swift.String?, shippingWard: Swift.String?, shippingStreet: Swift.String?, shippingAddress: Swift.String?, note: Swift.String, status: Swift.String, extra: TekoTracker.FlattenExtraAttribute?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+public protocol StringIdentifier {
+  var value: Swift.String { get }
+}
+extension String : TekoTracker.StringIdentifier {
+  public var value: Swift.String {
+    get
+  }
+}
+public func += <K, V>(left: inout [K : V], right: [K : V]) where K : Swift.Hashable
+public func + <K, V>(lhs: [K : V], rhs: [K : V]) -> [K : V] where K : Swift.Hashable
+extension Encodable {
+  public func asData() throws -> Foundation.Data
+  public func stringify(encoder: Foundation.JSONEncoder = .init(), encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+}
+@objc final public class PerformanceTimingEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var channel: Swift.String?
+  @objc final public var terminal: Swift.String?
+  @objc final public var category: Swift.String
+  @objc final public var action: Swift.String
+  @objc final public var actionParam: Any?
+  @objc final public var actionStartAt: Foundation.TimeInterval
+  @objc final public var actionEndAt: Foundation.TimeInterval
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  @objc public init(channel: Swift.String? = nil, terminal: Swift.String? = nil, category: Swift.String, action: Swift.String, actionParam: Any? = nil, actionStartAt: Foundation.TimeInterval, actionEndAt: Foundation.TimeInterval, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc final public class VisibleContentEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var index: Swift.Int
+  @objc final public var regionName: Swift.String
+  @objc final public var contentName: Swift.String
+  @objc public init(index: Swift.Int, regionName: Swift.String, contentName: Swift.String)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ErrorSource : Swift.String {
+  case client
+  case http
+  case webSocket
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc final public class ErrorEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  final public var errorSource: TekoTracker.ErrorSource! {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(errorSource) final public var objcErrorSource: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var apiCall: Swift.String
+  @objc final public var apiPayload: Swift.String?
+  @objc final public var httpResponseCode: Swift.Int
+  @objc final public var responseJson: Swift.String?
+  @objc final public var errorCode: Swift.String
+  @objc final public var errorMessage: Swift.String
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  public init(errorSource: TekoTracker.ErrorSource, apiCall: Swift.String, apiPayload: Swift.String?, httpResponseCode: Swift.Int, responseJson: Swift.String? = nil, errorCode: Swift.String, errorMessage: Swift.String, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(errorSource: Swift.String, apiCall: Swift.String, apiPayload: Swift.String?, httpResponseCode: Swift.Int, responseJson: Swift.String? = nil, errorCode: Swift.String, errorMessage: Swift.String, extra: TekoTracker.FlattenExtraAttribute?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct EventParameter {
+  public init(eventType: TekoTracker.EventType, eventName: TekoTracker.EventName, data: TekoTracker.EventDataProtocol)
+  public init(eventType: TekoTracker.EventTypeProtocol, eventName: TekoTracker.StringIdentifier, data: TekoTracker.EventDataProtocol)
+}
+public enum PaymentMethod : Swift.String {
+  case cash
+  case jcb
+  case visa
+  case masterCard
+  case internetBanking
+  case eWallet
+  case vnpayQR
+  case paymentGW
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+@objc final public class PaymentEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var orderID: Swift.String
+  @objc final public var referral: Swift.String?
+  @objc final public var amount: Swift.Double
+  final public var paymentMethod: TekoTracker.PaymentMethod {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(paymentMethod) final public var objcPaymentMethod: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var paymentBank: Swift.String?
+  final public var status: TekoTracker.EcommerceEventStatus {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(status) final public var objcStatus: Swift.String {
+    @objc get
+    @objc set
+  }
+  final public var statusCode: Swift.Int?
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(statusCode) final public var objcStatusCode: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  public init(orderID: Swift.String, referral: Swift.String?, amount: Swift.Double, paymentMethod: TekoTracker.PaymentMethod, paymentBank: Swift.String? = nil, status: TekoTracker.EcommerceEventStatus, statusCode: Swift.Int? = nil)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(orderID: Swift.String, referral: Swift.String?, amount: Swift.Double, paymentMethod: Swift.String, paymentBank: Swift.String?, status: Swift.String, statusCode: Foundation.NSNumber?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension TrackingProtocol {
+  public func sendCartEvent(name: TekoTracker.EventName, data: TekoTracker.CartEventData, isImmediate: Swift.Bool = false)
+  public func sendCartEvent(name: TekoTracker.StringIdentifier, data: TekoTracker.CartEventData, isImmediate: Swift.Bool = false)
+  public func sendCheckoutEvent(data: TekoTracker.CheckoutEventData, isImmediate: Swift.Bool = false)
+  public func sendPaymentEvent(data: TekoTracker.PaymentEventData, isImmediate: Swift.Bool = false)
+  public func sendSearchEvent(data: TekoTracker.SearchEventData, isImmediate: Swift.Bool = false)
+}
+public struct EventName : TekoTracker.StringIdentifier, Swift.Equatable {
+  public let value: Swift.String
+  public init(value: Swift.String)
+  public static func == (a: TekoTracker.EventName, b: TekoTracker.EventName) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class EventType : TekoTracker.EventTypeProtocol {
+  @objc final public let value: Swift.String
+  @objc final public let schemaIdentifier: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class Tracker : ObjectiveC.NSObject {
+  @objc public static var shared: TekoTracker.Tracker {
+    @objc get
+  }
+  @objc deinit
+  @objc public static func configure(config: TekoTracker.TrackerConfigurable?)
+  @objc public static func configure(configFileURL: Foundation.URL? = nil)
+  @objc override dynamic public init()
+}
+extension Tracker : TekoTracker.TrackingProtocol {
+  final public func use(userID: Swift.String, phoneNumber: Swift.String? = nil)
+  final public func send(eventType: TekoTracker.EventType, eventName: TekoTracker.EventName, data: TekoTracker.EventDataProtocol, isImmediate: Swift.Bool)
+  final public func sendAny(eventType: TekoTracker.EventTypeProtocol, eventName: TekoTracker.StringIdentifier, data: TekoTracker.EventDataProtocol, isImmediate: Swift.Bool)
+  final public func sendGroup(_ events: [TekoTracker.EventParameter], isImmediate: Swift.Bool)
+  final public func logDidEndLoadingTime()
+}
+extension Tracker {
+  @objc public static func configureMock()
+}
+@available(*, unavailable, message: "Unavailable in Swift")
+extension Tracker : TekoTracker.ObjcTrackingProtocol {
+  @objc final public func use(forUserID userID: Swift.String, phoneNumber: Swift.String?)
+  @objc final public func send(withEventType eventType: TekoTracker.EventTypeProtocol, eventName: Swift.String, data: TekoTracker.EventDataProtocol, isImmediate: Swift.Bool)
+}
+@usableFromInline
+internal protocol _AnyEncodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension _AnyEncodable {
+}
+public enum UserInteraction : Swift.String {
+  case click
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc final public class InteractionEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  final public var interaction: TekoTracker.UserInteraction {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(interaction) final public var objcInteraction: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var regionName: Swift.String
+  @objc final public var contentName: Swift.String
+  @objc final public var target: Swift.String
+  @objc final public var payload: Any?
+  final public var relativePosition: CoreGraphics.CGPoint?
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(relativePosition) final public var objcRelativePosition: Foundation.NSValue? {
+    @objc get
+    @objc set
+  }
+  final public var absolutePosition: CoreGraphics.CGPoint?
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(absolutePosition) final public var objcAbsolutePosition: Foundation.NSValue? {
+    @objc get
+    @objc set
+  }
+  public init(interaction: TekoTracker.UserInteraction = .click, regionName: Swift.String, contentName: Swift.String, target: Swift.String, payload: Any? = nil, relativePosition: CoreGraphics.CGPoint? = nil, absolutePosition: CoreGraphics.CGPoint? = nil)
+  @objc public init(regionName: Swift.String, contentName: Swift.String, target: Swift.String, payload: Any?, relativePosition: Foundation.NSValue?, absolutePosition: Foundation.NSValue?)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(interaction: Swift.String, regionName: Swift.String, contentName: Swift.String, target: Swift.String, payload: Any?, relativePosition: Foundation.NSValue?, absolutePosition: Foundation.NSValue?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension EventName {
+  public static let addToCart: TekoTracker.EventName
+  public static let removeFromCart: TekoTracker.EventName
+  public static let selectProduct: TekoTracker.EventName
+  public static let unselectProduct: TekoTracker.EventName
+  public static let revertProductToCart: TekoTracker.EventName
+  public static let increaseQuantityProduct: TekoTracker.EventName
+  public static let decreaseQuantityProduct: TekoTracker.EventName
+  public static let checkout: TekoTracker.EventName
+  public static let payment: TekoTracker.EventName
+  public static let search: TekoTracker.EventName
+}
+extension EventType {
+  public static let cart: TekoTracker.EventType
+  public static let checkout: TekoTracker.EventType
+  public static let payment: TekoTracker.EventType
+  public static let search: TekoTracker.EventType
+}
+public enum CartEventStatus : Swift.String {
+  case success
+  case failed
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EcommerceEventStatus : Swift.String {
+  case success
+  case failed
+  case timeout
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+@objc final public class CartEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var cartID: Swift.String
+  @objc final public var sku: Swift.String
+  @objc final public var name: Swift.String
+  @objc final public var price: Swift.Double
+  final public var promotionPrice: Swift.Double?
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(promotionPrice) final public var objPromotionPrice: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  @objc final public var quantity: Swift.Int
+  @objc final public var promotions: [Swift.String]
+  @objc final public var coupon: Swift.String?
+  final public var status: TekoTracker.CartEventStatus {
+    get
+    set
+  }
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(status) final public var objcStatus: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  public init(cartID: Swift.String, sku: Swift.String, name: Swift.String, price: Swift.Double, promotionPrice: Swift.Double? = nil, quantity: Swift.Int, promotions: [Swift.String] = [], coupon: Swift.String? = nil, status: TekoTracker.CartEventStatus, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(cartID: Swift.String, sku: Swift.String, name: Swift.String, price: Swift.Double, promotionPrice: Foundation.NSNumber?, quantity: Swift.Int, currency: Swift.String, promotions: [Swift.String], coupon: Swift.String?, status: Swift.String, extra: TekoTracker.FlattenExtraAttribute?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc final public class FlattenExtraAttribute : ObjectiveC.NSObject, Swift.Encodable {
+  @objc final public var first: Swift.String?
+  @objc final public var second: Swift.String?
+  @objc final public var third: Swift.String?
+  @objc final public var fourth: Swift.String?
+  @objc final public var fifth: Swift.String?
+  @objc public init(first: Swift.String? = nil, second: Swift.String? = nil, third: Swift.String? = nil, fourth: Swift.String? = nil, fifth: Swift.String? = nil)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class CustomEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var utmSource: Swift.String?
+  @objc final public var utmTerm: Swift.String?
+  @objc final public var utmCampaign: Swift.String?
+  @objc final public var utmMedium: Swift.String?
+  @objc final public var utmContent: Swift.String?
+  @objc final public var channel: Swift.String?
+  @objc final public var terminal: Swift.String?
+  @objc final public var property: Swift.String?
+  @objc final public var category: Swift.String?
+  @objc final public var action: Swift.String?
+  @objc final public var label: Swift.String?
+  final public var value: Swift.Int?
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc(value) final public var objcValue: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  public init(utmSource: Swift.String? = nil, utmTerm: Swift.String? = nil, utmCampaign: Swift.String? = nil, utmMedium: Swift.String? = nil, utmContent: Swift.String? = nil, channel: Swift.String? = nil, terminal: Swift.String? = nil, property: Swift.String? = nil, category: Swift.String? = nil, action: Swift.String? = nil, label: Swift.String? = nil, value: Swift.Int? = nil, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  @available(*, unavailable, message: "Unavailable in Swift")
+  @objc public init(utmSource: Swift.String?, utmTerm: Swift.String?, utmCampaign: Swift.String?, utmMedium: Swift.String?, utmContent: Swift.String?, channel: Swift.String?, terminal: Swift.String?, property: Swift.String?, category: Swift.String?, action: Swift.String?, label: Swift.String?, value: Foundation.NSNumber?, extra: TekoTracker.FlattenExtraAttribute?)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class ScreenViewEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc public var referrerScreenName: Swift.String {
+    get
+  }
+  @objc public var screenName: Swift.String
+  @objc public var contentType: Swift.String
+  @objc public var title: Swift.String?
+  @objc public var href: Swift.String?
+  @objc public var extra: TekoTracker.FlattenExtraAttribute?
+  @objc public var navigationStart: Foundation.TimeInterval
+  @objc public var loadEventEnd: Foundation.TimeInterval
+  @objc public init(screenName: Swift.String, contentType: Swift.String, title: Swift.String? = nil, href: Swift.String? = nil, extra: TekoTracker.FlattenExtraAttribute? = nil, navigationStart: Foundation.TimeInterval = 0, loadEventEnd: Foundation.TimeInterval = 0)
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc public func asData() throws -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class SearchEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var params: TekoTracker.SearchEventData.Params
+  @objc final public var keywords: [Swift.String]
+  @objc final public var sort: [Swift.String]
+  @objc final public var order: [Swift.String]
+  @objc public init(params: TekoTracker.SearchEventData.Params, keywords: [Swift.String] = [], sort: [Swift.String] = [], order: [Swift.String] = [])
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension SearchEventData {
+  @objc(SearchParams) final public class Params : ObjectiveC.NSObject, Swift.Encodable {
+    @objc final public var channel: Swift.String
+    @objc final public var terminal: Swift.String
+    @objc final public var keyword: Swift.String
+    @objc final public var page: Swift.Int
+    @objc final public var limit: Swift.Int
+    final public var minPrice: Swift.Double?
+    @available(*, unavailable, message: "Unavailable in Swift")
+    @objc(minPrice) final public var objcMinPrice: Foundation.NSNumber? {
+      @objc get
+      @objc set
+    }
+    final public var maxPrice: Swift.Double?
+    @available(*, unavailable, message: "Unavailable in Swift")
+    @objc(maxPrice) final public var objcMaxPrice: Foundation.NSNumber? {
+      @objc get
+      @objc set
+    }
+    @objc final public var objectives: [Swift.String]
+    @objc final public var productLines: [Swift.String]
+    @objc final public var saleStatuses: [Swift.String]
+    @objc final public var brands: [Swift.String]
+    @objc final public var categories: [Swift.String]
+    @objc final public var saleCategories: [Swift.String]
+    @objc final public var attributeSets: [Swift.String]
+    @objc final public var hasPromotions: Swift.Bool
+    public init(channel: Swift.String, terminal: Swift.String, keyword: Swift.String = "", page: Swift.Int, limit: Swift.Int, minPrice: Swift.Double? = nil, maxPrice: Swift.Double? = nil, objectives: [Swift.String] = [], productLines: [Swift.String] = [], saleStatuses: [Swift.String] = [], brands: [Swift.String] = [], categories: [Swift.String] = [], saleCategories: [Swift.String] = [], attributeSets: [Swift.String] = [], hasPromotions: Swift.Bool = false)
+    @available(*, unavailable, message: "Unavailable in Swift")
+    @objc public init(channel: Swift.String, terminal: Swift.String, keyword: Swift.String, page: Swift.Int, limit: Swift.Int, sort: [Swift.String], order: [Swift.String], minPrice: Foundation.NSNumber?, maxPrice: Foundation.NSNumber?, objectives: [Swift.String], productLines: [Swift.String], saleStatuses: [Swift.String], brands: [Swift.String], categories: [Swift.String], saleCategories: [Swift.String], attributeSets: [Swift.String], hasPromotions: Swift.Bool)
+    final public func encode(to encoder: Swift.Encoder) throws
+    @objc deinit
+    @objc override dynamic public init()
+  }
+}
+public protocol TrackingProtocol {
+  func use(userID: Swift.String, phoneNumber: Swift.String?)
+  func send(eventType: TekoTracker.EventType, eventName: TekoTracker.EventName, data: TekoTracker.EventDataProtocol, isImmediate: Swift.Bool)
+  func sendAny(eventType: TekoTracker.EventTypeProtocol, eventName: TekoTracker.StringIdentifier, data: TekoTracker.EventDataProtocol, isImmediate: Swift.Bool)
+  func sendGroup(_ events: [TekoTracker.EventParameter], isImmediate: Swift.Bool)
+  func logDidEndLoadingTime()
+}
+extension TrackingProtocol {
+  public func send(eventType: TekoTracker.EventType, eventName: TekoTracker.EventName, data: TekoTracker.EventDataProtocol)
+  public func sendAny(eventType: TekoTracker.EventTypeProtocol, eventName: TekoTracker.StringIdentifier, data: TekoTracker.EventDataProtocol)
+  public func sendGroup(_ events: [TekoTracker.EventParameter])
+  public func sendAlertEvent(data: TekoTracker.AlertEventData, isImmediate: Swift.Bool = false)
+  public func sendCustomEvent(name: TekoTracker.EventName, data: TekoTracker.CustomEventData, isImmediate: Swift.Bool = false)
+  public func sendCustomEvent(name: TekoTracker.StringIdentifier, data: TekoTracker.CustomEventData, isImmediate: Swift.Bool = false)
+  public func sendEnterScreenEvent(data: TekoTracker.ScreenViewEventData, isImmediate: Swift.Bool = false)
+  public func sendExitScreenEvent(data: TekoTracker.ScreenViewEventData, isImmediate: Swift.Bool = false)
+  public func sendErrorEvent(data: TekoTracker.ErrorEventData, isImmediate: Swift.Bool = false)
+  public func sendInteractionContentEvent(data: TekoTracker.InteractionEventData, isImmediate: Swift.Bool = false)
+  public func sendPerformanceTiming(data: TekoTracker.PerformanceTimingEventData, isImmediate: Swift.Bool = false)
+  public func sendVisibleContentEvent(data: [TekoTracker.VisibleContentEventData], isImmediate: Swift.Bool = false)
+}
+@objc final public class AlertEventData : ObjectiveC.NSObject, TekoTracker.EventDataProtocol, Swift.Encodable {
+  @objc final public var channel: Swift.String?
+  @objc final public var terminal: Swift.String?
+  @objc final public var alertType: Swift.String
+  @objc final public var alertMessage: Swift.String
+  @objc final public var extra: TekoTracker.FlattenExtraAttribute?
+  @objc public init(channel: Swift.String? = nil, terminal: Swift.String? = nil, alertType: Swift.String, alertMessage: Swift.String, extra: TekoTracker.FlattenExtraAttribute? = nil)
+  final public func encode(to encoder: Swift.Encoder) throws
+  @objc final public func asData() throws -> Foundation.Data
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TekoTracker.ErrorSource : Swift.Equatable {}
+extension TekoTracker.ErrorSource : Swift.Hashable {}
+extension TekoTracker.ErrorSource : Swift.RawRepresentable {}
+extension TekoTracker.PaymentMethod : Swift.Equatable {}
+extension TekoTracker.PaymentMethod : Swift.Hashable {}
+extension TekoTracker.PaymentMethod : Swift.RawRepresentable {}
+extension TekoTracker.UserInteraction : Swift.Equatable {}
+extension TekoTracker.UserInteraction : Swift.Hashable {}
+extension TekoTracker.UserInteraction : Swift.RawRepresentable {}
+extension TekoTracker.CartEventStatus : Swift.Equatable {}
+extension TekoTracker.CartEventStatus : Swift.Hashable {}
+extension TekoTracker.CartEventStatus : Swift.RawRepresentable {}
+extension TekoTracker.EcommerceEventStatus : Swift.Equatable {}
+extension TekoTracker.EcommerceEventStatus : Swift.Hashable {}
+extension TekoTracker.EcommerceEventStatus : Swift.RawRepresentable {}

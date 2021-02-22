@@ -13,6 +13,8 @@ import Hestia
 import Janus
 import TrackingBridge
 import FirebaseCore
+import TerraTheme
+import SampleSDK
 
 extension UIApplication {
     static var terraApp: ITerraApp!
@@ -50,8 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadTerra(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?, completion: @escaping (Bool) -> ()) {
         TerraApp.configure(appName: "cyhome:ios", bundleId: "vn.teko.superapp.demo") { (isSuccess, terraApp) in
-            if isSuccess, let terraApp = terraApp {
+            if isSuccess {
                 UIApplication.terraApp = terraApp
+                
+                SampleModule.configure(terraApp: terraApp)
+                ThemeManager.shared.configure(appName: terraApp.identity, forBundle: Bundle(for: AppDelegate.self))
+                ThemeManager.shared.configureTheme(theme: Theme.sample(), forApp: terraApp.identity)
+                
                 TerraHestia.configureWith(app: terraApp)
                 TerraJanus.configureWith(app: terraApp, for: application, launchOptions: launchOptions)
                 AppTrackingBridgeManager.initialize(withBridge: SuperAppTrackingBridge())

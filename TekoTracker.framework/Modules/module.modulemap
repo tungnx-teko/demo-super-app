@@ -1,0 +1,11 @@
+framework module TekoTracker {
+  umbrella header "TekoTracker.h"
+  
+  export *
+  module * { export * }
+}
+
+module TekoTracker.Swift {
+    header "TekoTracker-Swift.h"
+    requires objc
+}
