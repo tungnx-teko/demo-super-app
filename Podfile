@@ -66,7 +66,7 @@ target 'DemoSuperApp' do
   pod 'TekoSwiftGRPC'
   # Mini apps
 #  pod 'TripiFlightConnector', '1.1.0-dev'
-#  pod 'VnshopSdk', '1.3.3-staging'
+  pod 'VnshopSdk', '1.4.2-staging'
   
   pod 'FirebasePlugin', '~> 0.3.1'
   pod 'HestiaIOS'

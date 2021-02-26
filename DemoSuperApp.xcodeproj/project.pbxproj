@@ -45,6 +45,7 @@
 		1A78D95525DFAB07002C709F /* SampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78D89225DF998B002C709F /* SampleSDK.framework */; };
 		1A78D95625DFAB07002C709F /* SampleSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78D89225DF998B002C709F /* SampleSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A78D96025DFB007002C709F /* SampleSDKModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A78D95F25DFB007002C709F /* SampleSDKModule.swift */; };
+		1AE900F125E3AEF2001E3C88 /* UITableView+swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE900F025E3AEF2001E3C88 /* UITableView+swizzle.swift */; };
 		5C254E664C3236A6DA26C297 /* Pods_DemoSuperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F107A5245F0C3811143C350 /* Pods_DemoSuperApp.framework */; };
 		BD58E9805E6526CECD936674 /* Pods_SampleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3BD77738E195609B3DF88D /* Pods_SampleSDK.framework */; };
 /* End PBXBuildFile section */
@@ -160,6 +161,7 @@
 		1A78D90025DF99D6002C709F /* SampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCell.swift; sourceTree = "<group>"; };
 		1A78D90125DF99D6002C709F /* SampleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleCell.xib; sourceTree = "<group>"; };
 		1A78D95F25DFB007002C709F /* SampleSDKModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSDKModule.swift; sourceTree = "<group>"; };
+		1AE900F025E3AEF2001E3C88 /* UITableView+swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+swizzle.swift"; sourceTree = "<group>"; };
 		1F7C29A7F327ACD6FF4F76ED /* Pods-SampleSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleSDK.release.xcconfig"; path = "Target Support Files/Pods-SampleSDK/Pods-SampleSDK.release.xcconfig"; sourceTree = "<group>"; };
 		5F107A5245F0C3811143C350 /* Pods_DemoSuperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoSuperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3BD77738E195609B3DF88D /* Pods_SampleSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,7 +362,6 @@
 			children = (
 				1A78D60A25DE828A002C709F /* Theme.swift */,
 				1A78D60E25DE82AD002C709F /* ThemeManager.swift */,
-				1A78D61825DEBFB6002C709F /* UIViewController+swizzle.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -368,8 +369,10 @@
 		1A78D61225DE83B6002C709F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1A78D61825DEBFB6002C709F /* UIViewController+swizzle.swift */,
 				1A78D61425DE83C7002C709F /* UIView+vc.swift */,
 				1A78D68F25DF57A8002C709F /* Notification+.swift */,
+				1AE900F025E3AEF2001E3C88 /* UITableView+swizzle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				1A78D61925DEBFB6002C709F /* UIViewController+swizzle.swift in Sources */,
 				1A78D60B25DE828A002C709F /* Theme.swift in Sources */,
 				1A78D69025DF57A8002C709F /* Notification+.swift in Sources */,
+				1AE900F125E3AEF2001E3C88 /* UITableView+swizzle.swift in Sources */,
 				1A78D60F25DE82AD002C709F /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
